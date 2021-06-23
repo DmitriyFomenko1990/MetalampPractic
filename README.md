@@ -1,3 +1,2 @@
 # Webpack
-Pug
-scss
+Pug, scss
