@@ -1,0 +1,10 @@
+include ./header-guest
+include ../head
+include ./header-registered-user
+
+mixin header-and-footer
+    .header-and-footer
+        +head
+        +header-quest
+        .header-and-footer__registered
+            +header-registered

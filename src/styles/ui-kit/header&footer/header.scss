@@ -1,0 +1,111 @@
+@import "../../variables";
+.header{
+  background-color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  width: 100%;
+  padding: 0 140px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo-wrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__img-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12.5px;
+  }
+  &__text-logo {
+    width: 53.19px;
+    height: 12.95px;
+
+  }
+  &__navigation{
+    display: flex;
+    margin-left: 20px;
+  }
+  &__nav-list{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    @extend .common-dark50;
+    margin-right: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    &_arrow{
+      position: relative;
+      &:after{content: "";
+        border: solid $dark-shade-50;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        margin: 0 6px 2px 8px;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+
+    &_about{
+      font-family: Montserrat-Bold, sans-serif;
+      color: $dark-shade-75;
+    }
+  }
+  &__buttons{
+    display: flex;
+    align-items: center;
+  }
+  &__button-login{
+    position: relative;
+    width: 87px;
+    height: 34px;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border-radius: 22px;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    color: #BC9CFF;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      left: -2px;
+      right: -2px;
+      background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+      border-radius: 25px;
+      z-index: -1;
+    }
+  }
+  &__button-registration{
+    width: 196px;
+    height: 34px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF
+  }
+  &__nick-name{
+    @extend .common-dark50;
+    position: relative;
+    padding-left: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    &:before{
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 0px;
+      border-left: 1px solid $dark-shade-10;
+      height: 30px;
+    }
+
+  }
+}
