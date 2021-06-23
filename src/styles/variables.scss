@@ -11,10 +11,29 @@ $green: #6FCF97;
   font-size: 24px;
   line-height: 29px;
 }
-
-.common-dark50{
+.common-title-h2{
+  font-size: 19px;
+  line-height: 23px;
+}
+.common-title-h2{
+  font-size: 12px;
+  line-height: 15px;
+}
+.common-body-dark75{
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+}
+.common-dark50 {
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
   line-height: 17px;
   color: $dark-shade-50;
+}
+.common-body-dark25{
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-25;
 }

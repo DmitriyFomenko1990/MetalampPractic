@@ -1,0 +1,13 @@
+.main-logo{
+  display: flex;
+  align-items: center;
+  &__image {
+    width: 40px;
+    height: 40px;
+    margin-right: 12.5px;
+  }
+  &__text {
+    width: 53.19px;
+    height: 12.95px;
+  }
+}

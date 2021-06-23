@@ -1,6 +1,8 @@
 include ./header-guest
 include ../head
 include ./header-registered-user
+include ./footer-decktop
+include ./footer-mobile
 
 mixin header-and-footer
     .header-and-footer
@@ -8,3 +10,6 @@ mixin header-and-footer
         +header-quest
         .header-and-footer__registered
             +header-registered
+        +footer-desktop
+        .header-and-footer__footer-mobile
+            +footer-mobile

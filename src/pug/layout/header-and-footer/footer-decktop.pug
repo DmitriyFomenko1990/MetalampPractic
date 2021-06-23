@@ -1,0 +1,42 @@
+include ./logo
+include ./footer-copyrigth
+
+mixin footer-desktop
+    .footer-desk
+        .footer-desk__sentence
+            +logo
+            .footer-desk__description-container
+                p.footer-desk__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        .footer-desk__navigation
+            h3.footer-desk__navigation-title навигация
+            ul.footer-desk__navigation-list
+                li.footer-desk__navigation-item О нас
+                li.footer-desk__navigation-item Новости
+                li.footer-desk__navigation-item Служба поддержки
+                li.footer-desk__navigation-item Услуги
+        .footer-desk__about
+            h3.footer-desk__navigation-title о нас
+                ul.footer-desk__navigation-list
+                    li.footer-desk__navigation-item О сервисе
+                    li.footer-desk__navigation-item Наша команда
+                    li.footer-desk__navigation-item Вакансии
+                    li.footer-desk__navigation-item Инвесторы
+        .footer-desk__support
+            h3.footer-desk__navigation-title Служба поддержки
+                ul.footer-desk__navigation-list
+                    li.footer-desk__navigation-item Соглашения
+                    li.footer-desk__navigation-item Сообщества
+                    li.footer-desk__navigation-item Связь с нами
+        .footer-desk__subscription
+            h3.footer-desk__navigation-title Подписка
+            p.footer-desk__subscription-description Получайте специальные предложения и новости сервиса
+            form.footer-desk__subscription-form
+                input(
+                    type='email'
+                    placeholder="Email"
+                ).footer-desk__subscription-input
+                input(
+                    type="submit"
+                ).footer-desk__subscription-submit
+                button.footer-desk__button-submit
+    +footer-copyrigth
