@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -21,6 +20,22 @@ const optimization = () => {
     return config;
 };
 
+const HWPConfig = new HTMLWebpackPlugin({
+    template: path.resolve(__dirname, './src/pug/pages/index.pug'),
+    inject: false,
+    minify: isProd,
+    filename: 'index.html'
+});
+
+const htmlPages = ['index', 'header&footer'];
+const multiplesHtml = htmlPages.map(function(entryName) {
+    return new HTMLWebpackPlugin({
+        filename: entryName + '.html',
+        template: path.resolve(__dirname, `./src/pug/pages/${entryName}.pug`),
+        inject: false,
+    });
+});
+
 module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
@@ -31,22 +46,48 @@ module.exports = {
         filename: "[name].js",
         path: path.resolve(__dirname, "dist")
     },
-    devServer: {
-        port: 3000,
-        hot: isDev
+    resolve: {
+        extensions: ['.js', '.scss', '.pug'],
+        modules: ['node_modules']
     },
     optimization: optimization(),
+    module: {
+        rules: [
+            {
+                test: /\.pug$/,
+                use: [
+                    'raw-loader',
+                    'pug-plain-loader',
+                ]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: isDev }
+                    },
+                    'postcss-loader',
+                    "sass-loader",
+                ],
+            },
+            {
+                test: /\.(png|jpg|svg|gif)$/,
+                use: ["file-loader"]
+            },
+            {
+                test: /\.(ttf|woff|woff2|eot)$/,
+                use: ["file-loader"]
+            }
+        ]
+    },
     plugins: [
         new CleanWebpackPlugin(),
-        new HTMLWebpackPlugin({
-                template: "./pug/pages/index.pug",
-            minify: {
-                    collapseWhitespace: isProd
-            }
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
         }),
-        new HtmlWebpackPugPlugin({
-            adjustIndent: true
-        }),
+        HWPConfig,
         new CopyWebpackPlugin({
             patterns: [
                 {
@@ -61,33 +102,10 @@ module.exports = {
                 },
             ]
         }),
-        new MiniCssExtractPlugin()
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.pug$/,
-                use: [
-                    'raw-loader',
-                    'pug-plain-loader',
-                ]
-            },
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader",
-                ],
-            },
-            {
-                test: /\.(png|jpg|svg|gif)$/,
-                use: ["file-loader"]
-            },
-            {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ["file-loader"]
-            }
-        ]
-    }
+    ].concat(multiplesHtml),
+    devServer: {
+        port: 3000,
+        hot: isDev
+    },
+
 }

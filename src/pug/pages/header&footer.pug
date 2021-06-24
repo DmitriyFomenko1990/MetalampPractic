@@ -1,0 +1,17 @@
+extends ./extend
+
+include ../layout/header-and-footer/header-guest
+include ../layout/head
+include ../layout/header-and-footer/header-registered-user
+include ../layout/header-and-footer/footer-decktop
+include ../layout/header-and-footer/footer-mobile
+
+block content
+        .header-and-footer
+            +head
+            +header-quest
+            .header-and-footer__registered
+                +header-registered
+            +footer-desktop
+            .header-and-footer__footer-mobile
+                +footer-mobile

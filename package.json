@@ -12,6 +12,7 @@
   "author": "Dmitriy",
   "license": "ISC",
   "devDependencies": {
+    "bemto.pug": "^2.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.0",
     "cross-env": "^7.0.3",
@@ -21,6 +22,8 @@
     "html-webpack-pug-plugin": "^3.0.0",
     "mini-css-extract-plugin": "^1.6.0",
     "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.1.0",
