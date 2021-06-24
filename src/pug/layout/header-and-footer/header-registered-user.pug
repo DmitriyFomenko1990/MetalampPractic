@@ -2,8 +2,8 @@ include ./login-buttons
 include ./nav-bar
 
 mixin header-registered
-    .header
+    +b.header
         +logo
-        .header__navigation
+        +e.__navigation
             +nav-bar
-            h3.header__nick-name Юлий Цезарь
+            +e.H3.__nick-name Юлий Цезарь

@@ -7,11 +7,11 @@ include ../layout/header-and-footer/footer-decktop
 include ../layout/header-and-footer/footer-mobile
 
 block content
-        .header-and-footer
+        +b.header-and-footer
             +head
             +header-quest
-            .header-and-footer__registered
+            +e.__registered
                 +header-registered
             +footer-desktop
-            .header-and-footer__footer-mobile
+            +e.__footer-mobile
                 +footer-mobile
