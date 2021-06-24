@@ -27,7 +27,7 @@ const HWPConfig = new HTMLWebpackPlugin({
     filename: 'index.html'
 });
 
-const htmlPages = ['index', 'header&footer'];
+const htmlPages = ['index', 'header&footer', 'colors-and-types'];
 const multiplesHtml = htmlPages.map(function(entryName) {
     return new HTMLWebpackPlugin({
         filename: entryName + '.html',

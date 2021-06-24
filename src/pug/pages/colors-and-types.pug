@@ -1,0 +1,60 @@
+extends ./extend
+
+include ../layout/head
+
+
+block content
+    +b.head-types
+        +head
+    +b.wrapper-types
+        +b
+            +b.color-type
+                +e.__example._dark-100
+                +e.__description
+                    +e.P.__color-name Dark Shade 100%
+                    +e.P.__color-hex #1F2041
+            +b.color-type
+                +e.__example._dark-75
+                +e.__description
+                    +e.P.__color-name Dark Shade 75%
+                    +e.P.__color-hex #1F2041
+            +b.color-type
+                +e.__example._dark-50
+                +e.__description
+                    +e.P.__color-name Dark Shade 50%
+                    +e.P.__color-hex #1F2041
+            +b.color-type
+                +e.__example._dark-25
+                +e.__description
+                    +e.P.__color-name Dark Shade 25%
+                    +e.P.__color-hex #1F2041
+            +b.color-type
+                +e.__example._dark-5
+                +e.__description
+                    +e.P.__color-name Dark Shade 5%
+                    +e.P.__color-hex #1F2041
+            +b.color-type
+                +e.__example._purple
+                +e.__description
+                    +e.P.__color-name Purple
+                    +e.P.__color-hex #BC9CFF
+            +b.color-type
+                +e.__example._green
+                +e.__description
+                    +e.P.__color-name Green
+                    +e.P.__color-hex #6FCF97
+        +b
+            +b.font-type
+                +e.H1.__type H1
+                +e.H1 This one is the sub-section or widget title
+            +b.font-type
+                +e.H2.__type H2
+                +e.H2 Next one is the item title inside widgets
+            +b.font-type
+                +e.H3.__type H3
+                +e.H3 This is a label or CTA text
+            +b.font-type
+                +e.P.__type Body
+                +e.P This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+

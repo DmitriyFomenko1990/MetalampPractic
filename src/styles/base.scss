@@ -17,7 +17,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
 body{
-    font-family: 'Montserrat-Bold', sans-serif;
-    color: $dark-shade-100p;
+    @extend .common-body-dark75;
 }
-
+h1{
+    @extend .common-title-h1;
+}
+h2{
+    @extend .common-title-h2;
+}
+h3{
+    @extend .common-title-h3;
+}

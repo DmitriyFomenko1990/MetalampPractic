@@ -10,14 +10,20 @@ $green: #6FCF97;
 .common-title-h1{
   font-size: 24px;
   line-height: 29px;
+  font-family: Montserrat-Bold, sans-serif;
+  color: $dark-shade-100p;
 }
 .common-title-h2{
+  font-family: Montserrat-Bold, sans-serif;
   font-size: 19px;
   line-height: 23px;
+  color: $dark-shade-100p;
 }
-.common-title-h2{
+.common-title-h3{
+  font-family: Montserrat-Bold, sans-serif;
   font-size: 12px;
   line-height: 15px;
+  color: $dark-shade-100p;
 }
 .common-body-dark75{
   font-family: Montserrat-Regular, sans-serif;

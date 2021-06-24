@@ -12,11 +12,7 @@
   &__description-container{
     margin-top: 20px;
   }
-  &__description{
-    @extend .common-body-dark75;
-  }
   &__navigation-title{
-    @extend .common-title-h2;
     text-transform: uppercase;
   }
   &__navigation-item{
