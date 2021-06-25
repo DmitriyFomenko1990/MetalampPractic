@@ -4,7 +4,7 @@
   padding: 30px 0 67px;
 }
 .wrapper-types{
-  padding: 0 150px;
+  padding: 0 158px 0 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -49,14 +49,25 @@
     }
 }
 .font-type{
-  margin-bottom: 51px;
-  display: flex;
-  &__type{
+  display: grid;
+
+  grid-template-columns: 70px 370px;
+  grid-template-rows: repeat(4, max-content) ;
+  &__name{
     margin-right: 30px;
-    color: $dark-shade-25;
-    font-family: Montserrat-Regular, sans-serif;
-    & > {
-      display: block;
+    text-align: right;
+    & h1, h2, h3, p{
+      font-family: Montserrat-Regular, sans-serif;
+      color: $dark-shade-25;
+    }
+  }
+  &__example{
+    margin-bottom: 51px;
+    &_body{
+      max-width: 301px;
+    }
+    &_uppercase{
+      text-transform: uppercase;
     }
   }
 }
