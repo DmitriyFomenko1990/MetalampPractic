@@ -1,2 +1,2 @@
-# Webpack
+# Webpack 1
 Pug, scss
