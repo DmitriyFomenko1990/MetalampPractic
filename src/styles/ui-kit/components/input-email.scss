@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.input-email{
+  width: 320px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 0 15px;
+  @extend .common-body-dark75;
+
+  &::placeholder{
+    color: $dark-shade-25;
+  }
+
+  &:hover, &:focus{
+    @extend .common-body-dark75;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    &::placeholder{
+       color: $dark-shade-75;
+    }
+  }
+
+}

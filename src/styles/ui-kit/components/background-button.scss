@@ -1,0 +1,16 @@
+@import "../../variables";
+
+.background-button{
+  width: 99px;
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  text-transform: uppercase;
+  @extend .common-title-h3;
+  padding: 0;
+  color: $white;
+  transition: opacity 0.5s;
+  &:hover{
+    opacity: 0.5;
+  }
+}
