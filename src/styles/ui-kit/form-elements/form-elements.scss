@@ -27,6 +27,12 @@
 }
 .buttons{
   grid-area: tr;
+  &__background-button{
+    margin-bottom: 30px;
+  }
+  &__border-button{
+    margin-bottom: 30px;
+  }
 }
 .dropdown-right{
   grid-area: l;
