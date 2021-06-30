@@ -1,0 +1,42 @@
+.element-head{
+  padding: 30px 0 65px ;
+}
+.content{
+  padding: 0 140px;
+  border: solid 1px black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 126px;
+  grid-row-gap: 10px;
+  grid-template-areas:
+          "tl rc tr"
+          "l cc cr"
+          "l br br";
+}
+.common-headers{
+  margin-bottom:5px;
+}
+.button-headers{
+  margin-bottom: 16px;
+}
+.text-fields{
+  grid-area: tl;
+}
+.checkbox-buttons{
+  grid-area: rc;
+}
+.buttons{
+  grid-area: tr;
+}
+.dropdown-right{
+  grid-area: l;
+}
+.dropdown-center{
+  grid-area: cc;
+}
+.dropdown-left{
+  grid-area: cr;
+}
+.comments{
+  grid-area: br;
+}

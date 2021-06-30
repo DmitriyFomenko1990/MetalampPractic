@@ -1,0 +1,25 @@
+extends ./extend
+
+include ../layout/head
+include ../layout/components/input-email
+include ../layout/components/checkbox-buttons
+include ../layout/components/background-button
+
+
+block content
+    +b.element-head
+        +head
+    +b.content
+        +b.text-fields
+            +b.H3.common-headers TEXT FIELD
+            +input-email
+        +b.checkbox-buttons
+            +b.H3.button-headers CHECKBOX BUTTONS
+            +checkbox-buttons
+        +b.buttons
+            +b.H3.button-headers CHECKBOX BUTTONS
+            +background-button
+        +b.dropdown-right Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad adipisci aliquid architecto aut cupiditate esse, explicabo id, incidunt nemo officia reprehenderit rerum sed sint tempora totam, voluptate? Accusamus alias assumenda eum illum non obcaecati perferendis perspiciatis possimus praesentium quae quasi reprehenderit sint suscipit, tempora, veniam? Ab accusamus adipisci alias amet beatae consequuntur dolor doloremque earum enim et expedita, explicabo fugit incidunt inventore, iste, iure laudantium modi molestiae molestias neque nisi numquam obcaecati quod reiciendis rem similique suscipit tempora tempore tenetur unde vel velit vitae voluptatum. Asperiores at commodi consequuntur, debitis ea laboriosam placeat sint suscipit tenetur vero voluptates voluptatum?
+        +b.dropdown-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quia.
+        +b.dropdown-left Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate.
+        +b.comments Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quia.
