@@ -1,0 +1,10 @@
+mixin range-slider(description)
+    +b.range-slider
+        +e.title
+            +e.H3.description= description
+            +e.coast
+                span#slider-margin-value-min.example-val
+                span &nbsp-&nbsp
+                span#slider-margin-value-max.example-val
+        +e.slider-wrapper
+            #slider
