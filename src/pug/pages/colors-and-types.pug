@@ -1,5 +1,5 @@
 extends ./extend
-
+include ../layout/components/buttons/border-button
 include ../layout/head
 
 
@@ -60,5 +60,4 @@ block content
                 p Body
             +e.__example._body
                 p This is the body text which is used for most of the design, like paragraphs, lists, etc.
-
-
+            +border-button('ddd')

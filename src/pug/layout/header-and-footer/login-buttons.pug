@@ -1,6 +1,7 @@
-include  ../components/border-button
+include  ../components/buttons/border-button
 mixin login-buttons
     +b.header__buttons
         +e.BUTTON.__button-login войти
-        +border-button
+        +b
+            +border-button('войти')
         +e.BUTTON.__button-registration зарегистрироваться
