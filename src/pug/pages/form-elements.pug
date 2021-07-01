@@ -3,6 +3,7 @@ extends ./extend
 include ../layout/head
 include ../layout/components/input-email
 include ../layout/components/pagination
+include ../layout/components/range-slider
 include ../layout/components/buttons/checkbox-buttons
 include ../layout/components/buttons/background-button
 include ../layout/components/buttons/border-button
@@ -21,6 +22,8 @@ block content
             +b.H3.button-headers CHECKBOX BUTTONS
             +checkbox-buttons
         +b.buttons
+            +e.button
+                +range-slider('Range Slider')
             +b.H3.button-headers CHECKBOX BUTTONS
             +e.button
                 +background-button('click me')
