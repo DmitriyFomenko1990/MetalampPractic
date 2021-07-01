@@ -58,3 +58,10 @@ $white: #FFFFFF;
   line-height: 15px;
   text-transform: uppercase;
 }
+@mixin pagination-selected {
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}

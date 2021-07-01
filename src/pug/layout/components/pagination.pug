@@ -1,0 +1,16 @@
+include ./arrow
+mixin pagination
+    +b.pagination-wrapper
+        +b.pagination
+            +e.BUTTON.selected-page 1
+            +e.BUTTON.unselected-btn 2
+            +e.BUTTON.unselected-btn 3
+            +e.BUTTON.unselected-btn ...
+            +e.BUTTON.unselected-btn 15
+            +e.BUTTON.next-page-btn
+                +e.arrow
+                    +arrow
+        +b.pagination-footer
+            p 1 – 12 из 100+ вариантов аренды
+
+

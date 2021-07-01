@@ -27,11 +27,15 @@
 }
 .buttons{
   grid-area: tr;
-  &__background-button{
+  &__button{
     margin-bottom: 30px;
   }
-  &__border-button{
-    margin-bottom: 30px;
+  &__pagination-block{
+    margin-top: 40px;
+    text-transform: uppercase;
+  }
+  &__pagination-title{
+    margin-bottom: 16px;
   }
 }
 .dropdown-right{
