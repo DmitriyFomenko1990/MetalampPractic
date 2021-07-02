@@ -1,9 +1,10 @@
-mixin checkbox-input(name, label, isChecked)
+mixin checkbox-input(name, value, label, isChecked)
     +b.input-checkbox
         +e.INPUT(
             type='checkbox'
             name= name
+            value= value
             checked= isChecked
-            id= name
+            id= value
         ).__field
-        +e.LABEL(for= name).checkbox-js.__label._active= label
+        +e.LABEL(for= value).__label= label
