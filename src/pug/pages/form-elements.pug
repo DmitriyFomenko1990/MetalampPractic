@@ -5,6 +5,7 @@ include ../layout/components/input-email
 include ../layout/components/pagination
 include ../layout/components/range-slider
 include ../layout/components/buttons/checkbox-buttons
+include ../layout/components/buttons/radio-buttons
 include ../layout/components/buttons/background-button
 include ../layout/components/buttons/border-button
 include ../layout/components/buttons/text-button
@@ -19,12 +20,16 @@ block content
             +b.H3.common-headers TEXT FIELD
             +input-email
         +b.checkbox-buttons
-            +b.H3.button-headers CHECKBOX BUTTONS
-            +checkbox-buttons
+            +e.checkbox-rules
+                h3 CHECKBOX BUTTONS
+                +checkbox-buttons
+            +e.radio-buttons-block
+                h3 RADIO-BUTTONS
+                +radio-buttons
         +b.buttons
             +e.button
                 +range-slider('Range Slider')
-            +b.H3.button-headers BUTTONS
+            +b.H3.button-header BUTTONS
             +e.button
                 +background-button('click me')
             +e.button

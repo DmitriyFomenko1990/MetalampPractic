@@ -1,0 +1,19 @@
+mixin radio-buttons
+    +b.radio-buttons
+        +e.input-radio-buttons
+            +e.INPUT(
+                type='radio'
+                name= 'sex'
+                checked
+                id= 'man'
+                value= 'man'
+            ).__field
+            +e.LABEL(for= 'man').label Мужчина
+        +e.input-radio-buttons
+            +e.INPUT(
+                type='radio'
+                name= 'sex'
+                id= 'woman'
+                value= 'woman'
+            ).__field
+            +e.LABEL(for= 'woman').label Женщина
