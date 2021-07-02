@@ -5,7 +5,7 @@
   padding: 0 140px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 126px;
+  grid-column-gap: 25px;
   grid-row-gap: 10px;
   grid-template-areas:
           "tl rc tr"
@@ -24,23 +24,24 @@
   h3 {
     margin-bottom: 16px;
   }
-  &__checkbox-rules{
-    margin-bottom: 40px;
+  &__checkbox{
+    padding-bottom: 40px;
   }
-  &__radio-buttons-block{
 
-  }
 }
 .button-header{
   margin-bottom: 16px;
 }
 .buttons{
   grid-area: tr;
+  &:first-child{
+    padding-top: 0;
+  }
   &__button{
-    margin-bottom: 30px;
+    padding: 0 0 30px;
   }
   &__pagination-block{
-    margin-top: 40px;
+    padding-top: 25px;
     text-transform: uppercase;
   }
   &__pagination-title{

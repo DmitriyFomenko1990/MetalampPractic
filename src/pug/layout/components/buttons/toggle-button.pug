@@ -1,0 +1,8 @@
+mixin toggle-button(label)
+    +b.toggle-button
+        +e.INPUT(
+            type='checkbox'
+            name= 'offers'
+            id= 'offers'
+        ).__field
+        +e.LABEL(for= 'offers').label= label

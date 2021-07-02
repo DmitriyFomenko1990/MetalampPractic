@@ -10,6 +10,7 @@ include ../layout/components/buttons/background-button
 include ../layout/components/buttons/border-button
 include ../layout/components/buttons/text-button
 include ../layout/components/buttons/long-button
+include ../layout/components/buttons/toggle-button
 
 
 block content
@@ -20,16 +21,19 @@ block content
             +b.H3.common-headers TEXT FIELD
             +input-email
         +b.checkbox-buttons
-            +e.checkbox-rules
+            +e.checkbox
                 h3 CHECKBOX BUTTONS
                 +checkbox-buttons
-            +e.radio-buttons-block
+            +e.checkbox
                 h3 RADIO-BUTTONS
                 +radio-buttons
+            +e.checkbox
+                h3 TOGGLE
+                +toggle-button('Получать спецпредложения')
         +b.buttons
             +e.button
                 +range-slider('Range Slider')
-            +b.H3.button-header BUTTONS
+            h3.button-header BUTTONS
             +e.button
                 +background-button('click me')
             +e.button

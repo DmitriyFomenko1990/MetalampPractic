@@ -3,6 +3,9 @@
   display: flex;
   justify-content: space-between;
   max-width: 220px;
+  &__input-radio-buttons{
+    width: 100%;
+  }
   &__field{
     display: none;
     &:checked + .radio-buttons__label{
@@ -16,6 +19,7 @@
     }
   }
   &__label{
+    width: 100%;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -25,23 +29,23 @@
     &:before{
       content: "";
       cursor: pointer;
-      align-self: flex-start;
+      align-self: center;
       flex: 0 0 20px;
       height: 20px;
       border: 1px solid $dark-shade-25;
-      border-radius: 10px;
+      border-radius: 50%;
       margin-right: 10px;
     }
     &:after{
       content: "";
       position: absolute;
       cursor: pointer;
-      top: 4px;
+      top: 6px;
       left: 4px;
       width: 12px;
       height: 12px;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      border-radius: 10px;
+      border-radius: 50%;
       transition: 0.5s;
       transform: scale(0);
     }
