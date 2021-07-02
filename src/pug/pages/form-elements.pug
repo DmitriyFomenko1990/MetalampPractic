@@ -11,6 +11,9 @@ include ../layout/components/buttons/border-button
 include ../layout/components/buttons/text-button
 include ../layout/components/buttons/long-button
 include ../layout/components/buttons/toggle-button
+include ../layout/components/checkboxes/rich-checkbox-buttons
+include ../layout/components/checkboxes/expandable-checkbox-list
+include ../layout/components/bullet-list
 
 
 block content
@@ -28,8 +31,10 @@ block content
                 h3 RADIO-BUTTONS
                 +radio-buttons
             +e.checkbox
-                h3 TOGGLE
+                h3 Toggle
                 +toggle-button('Получать спецпредложения')
+            +e.checkbox
+                h3 like button
         +b.buttons
             +e.button
                 +range-slider('Range Slider')
@@ -45,7 +50,12 @@ block content
             +e.pagination-block
                 +e.H3.pagination-title pagination
                 +pagination
-        +b.dropdown-right Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad adipisci aliquid architecto aut cupiditate esse, explicabo id, incidunt nemo officia reprehenderit rerum sed sint tempora totam, voluptate? Accusamus alias assumenda eum illum non obcaecati perferendis perspiciatis possimus praesentium quae quasi reprehenderit sint suscipit, tempora, veniam? Ab accusamus adipisci alias amet beatae consequuntur dolor doloremque earum enim et expedita, explicabo fugit incidunt inventore, iste, iure laudantium modi molestiae molestias neque nisi numquam obcaecati quod reiciendis rem similique suscipit tempora tempore tenetur unde vel velit vitae voluptatum. Asperiores at commodi consequuntur, debitis ea laboriosam placeat sint suscipit tenetur vero voluptates voluptatum?
-        +b.dropdown-center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quia.
-        +b.dropdown-left Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate.
+        +b.dropdown-right
+            +expandable-checkbox-list
+        +b.dropdown-center
+            h3 rich Checkbox Buttons
+            +rich-checkbox-buttons
+        +b.dropdown-left
+            h3 bullet list
+            +bullet-list
         +b.comments Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quia.

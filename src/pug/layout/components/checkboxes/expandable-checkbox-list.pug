@@ -1,0 +1,13 @@
+include ../inputs/checkbox-input
+mixin expandable-checkbox-list
+    +b.expandable-checkbox-list
+        +e.H3.heaher expandable checkbox list
+        +e.BUTTON.list-opener
+    +b.list-wrapper
+        +checkbox-input('additional-comforts', 'breakfast', 'Завтрак', false)
+        +checkbox-input('additional-comforts', 'table', 'Письменный стол', true)
+        +checkbox-input('additional-comforts', 'сhildren-bed', 'Кроватка', true)
+        +checkbox-input('additional-comforts', 'сhildren-chair', 'Стул для кормления', true)
+        +checkbox-input('additional-comforts', 'tv','Телевизор', false)
+        +checkbox-input('additional-comforts', 'shampoo', 'Шампунь', false)
+
