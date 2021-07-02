@@ -1,23 +1,6 @@
+include ../inputs/checkbox-input
 mixin checkbox-buttons
     +b.checkbox-wrapper
-        +b.input-checkbox
-            +e.INPUT(
-                type='checkbox'
-                name="smoke"
-            ).__field
-            +e.LABEL.checkbox-js.__label Можно курить
-        +b.input-checkbox
-            +e.INPUT(
-                type='checkbox'
-                name="pets"
-            ).__field
-            +e.LABEL.__label
-                span Можно с питомцами
-            +e.checkbox-js.__check._active
-        +b.input-checkbox
-            +e.INPUT(
-                type='checkbox'
-                name="guests"
-            ).__field
-            +e.LABEL.checkbox-js.__label._active Можно пригласить гостей (до 10 человек)
-            +e.checkbox-js.__check._active
+        +checkbox-input('smoke', 'Можно курить', false)
+        +checkbox-input('pets', 'Можно с питомцами', true)
+        +checkbox-input('quests', 'Можно пригласить гостей (до 10 человек)', true)
