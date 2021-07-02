@@ -23,6 +23,7 @@
   grid-area: rc;
   h3 {
     margin-bottom: 16px;
+    text-transform: uppercase;
   }
   &__checkbox{
     padding-bottom: 40px;
@@ -53,9 +54,17 @@
 }
 .dropdown-center{
   grid-area: cc;
+  h3 {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
 }
 .dropdown-left{
   grid-area: cr;
+  h3 {
+    margin-bottom: 13px;
+    text-transform: uppercase;
+  }
 }
 .comments{
   grid-area: br;
