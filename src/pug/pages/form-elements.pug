@@ -1,9 +1,16 @@
 extends ./extend
 
 include ../layout/head
-include ../layout/components/inputs/input-email
 include ../layout/components/pagination
 include ../layout/components/range-slider
+include ../layout/components/bullet-list
+include ../layout/components/additional-information
+include ../layout/components/comment
+include ../layout/components/inputs/text-input
+include ../layout/components/inputs/guests-input
+include ../layout/components/inputs/date-input
+include ../layout/components/inputs/rooms-input
+include ../layout/components/inputs/subscription-input
 include ../layout/components/buttons/checkbox-buttons
 include ../layout/components/buttons/radio-buttons
 include ../layout/components/buttons/background-button
@@ -15,9 +22,7 @@ include ../layout/components/buttons/likes-button
 include ../layout/components/buttons/rate-button
 include ../layout/components/checkboxes/rich-checkbox-buttons
 include ../layout/components/checkboxes/expandable-checkbox-list
-include ../layout/components/bullet-list
-include ../layout/components/additional-information
-include ../layout/components/comment
+
 
 
 block content
@@ -25,8 +30,23 @@ block content
         +head
     +b.content
         +b.text-fields
-            +b.H3.common-headers TEXT FIELD
-            +input-email
+            +e.input-block
+                +e.H3.common-headers TEXT FIELD
+                +text-input('email', 'email', 'Email',)
+            +e.input-block
+                +e.H3.common-headers Dropdown
+                +guests-input
+            +e.input-block
+                +date-input('masked text field')
+            +e.input-block_duble-date
+                +date-input('date Dropdown')
+                +date-input('date Dropdown')
+            +e.input-block
+                +e.H3.common-headers dropdown
+                +rooms-input
+            +b.subscription-ui
+                +e.H3.common-headers subscription text field
+                +subscription-input
         +b.checkbox-buttons
             +e.checkbox
                 h3 CHECKBOX BUTTONS
@@ -76,5 +96,7 @@ block content
             +bullet-list
         +b.comments
             +comment('murad-avatar.jpg', 'Мурад Сарафанов','5 дней назад',
-                'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
+                'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не ' +
+                'жаловался из соседей.',
                 '12', true)

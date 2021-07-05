@@ -1,10 +1,14 @@
-@import "inputs/input-email";
+@import "inputs/text-input";
+@import "inputs/guests-input";
+@import "inputs/date-input";
+@import "inputs/rooms-input";
+@import "inputs/checkbox-input";
+@import "inputs/subscription-input";
 @import "arrow";
 @import "pagination";
 @import "range-slider";
 @import "bullet-list";
 @import "buttons/checkbox-buttons";
-@import "inputs/checkbox-input";
 @import "buttons/background-button";
 @import "buttons/border-button";
 @import "buttons/text-button";

@@ -12,12 +12,31 @@
           "l cc cr"
           "l br br";
 }
-.common-headers{
-  margin-bottom:5px;
-}
 
 .text-fields{
   grid-area: tl;
+  &__common-headers{
+    margin-bottom:5px;
+    text-transform: uppercase;
+  }
+  &__input-block{
+    max-width: 320px;
+    margin-bottom: 20px;
+    &_duble-date{
+      display: flex;
+      justify-content: space-between;
+      & > div{
+        max-width: 150px;
+      }
+    }
+  }
+}
+.subscription-ui{
+  max-width: 267px;
+  &__common-headers{
+    margin-bottom:5px;
+    text-transform: uppercase;
+  }
 }
 .checkbox-buttons{
   grid-area: rc;
@@ -41,7 +60,6 @@
       margin-right: 20px;
     }
   }
-
 }
 .button-header{
   margin-bottom: 16px;
