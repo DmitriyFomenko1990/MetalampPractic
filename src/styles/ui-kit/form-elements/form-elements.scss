@@ -33,6 +33,14 @@
       margin-right: 10px;
     }
   }
+  &__rating{
+    display: flex;
+    max-width: 300px;
+    & > div {
+      flex: 1 1 auto;
+      margin-right: 20px;
+    }
+  }
 
 }
 .button-header{
