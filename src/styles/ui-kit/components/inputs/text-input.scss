@@ -1,9 +1,9 @@
 @import "../../../variables";
 
-.input-email{
-  width: 320px;
+.text-input{
+  width: 100%;
   height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $dark-shade-25;
   border-radius: 4px;
   padding: 0 15px;
   @extend .common-body-dark75;
@@ -12,10 +12,9 @@
   }
   &:hover, &:focus{
     @extend .common-body-dark75;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid $dark-shade-50;
     &::placeholder{
        color: $dark-shade-75;
     }
   }
-
 }

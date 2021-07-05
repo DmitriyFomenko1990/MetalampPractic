@@ -1,5 +1,6 @@
 include ./logo
 include ./footer-copyrigth
+include ../components/inputs/subscription-input
 
 mixin footer-desktop
     +b.footer-desk
@@ -30,13 +31,5 @@ mixin footer-desktop
         +e.__subscription
             +e.H3.__navigation-title Подписка
             +e.P.__subscription-description Получайте специальные предложения и новости сервиса
-            +e.FORM.__subscription-form
-                +e.INPUT(
-                    type='email'
-                    placeholder="Email"
-                ).__subscription-input
-                +e.INPUT(
-                    type="submit"
-                ).__subscription-submit
-                +e.BUTTON.__button-submit
+            +subscription-input
     +footer-copyrigth

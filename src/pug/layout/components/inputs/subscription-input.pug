@@ -1,0 +1,9 @@
+include ./text-input
+mixin subscription-input
+    +b.subscription-input
+        +e.FORM.form
+            +text-input('email', 'email', 'Email')
+            +e.INPUT(
+                type="submit"
+            ).submit
+            +e.BUTTON.button-submit
