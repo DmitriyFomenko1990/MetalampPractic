@@ -1,7 +1,7 @@
 extends ./extend
 
 include ../layout/head
-include ../layout/components/input-email
+include ../layout/components/inputs/input-email
 include ../layout/components/pagination
 include ../layout/components/range-slider
 include ../layout/components/buttons/checkbox-buttons
@@ -16,6 +16,7 @@ include ../layout/components/buttons/rate-button
 include ../layout/components/checkboxes/rich-checkbox-buttons
 include ../layout/components/checkboxes/expandable-checkbox-list
 include ../layout/components/bullet-list
+include ../layout/components/additional-information
 
 
 block content
@@ -62,6 +63,10 @@ block content
                 +pagination
         +b.dropdown-right
             +expandable-checkbox-list
+            +e.additional-info
+                +additional-information('comfort.svg', 'Комфорт', 'Шумопоглощающие стены')
+                +additional-information('convenience.svg', 'Удобство', 'Окно в каждой из спален')
+                +additional-information('cosiness.svg', 'Уют', 'Номер оснащён камином')
         +b.dropdown-center
             h3 rich Checkbox Buttons
             +rich-checkbox-buttons

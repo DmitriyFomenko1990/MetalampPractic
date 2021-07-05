@@ -1,0 +1,18 @@
+.additional-information {
+  display: flex;
+  max-width: 280px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  &__image{
+    flex: 0 1 48px;
+    height: 48px;
+    margin-right: 10px;
+    transform: scale(0.85);
+  }
+  &__title{
+    font-family: Montserrat-Bold, sans-serif;
+  }
+  &__description{
+
+  }
+}
