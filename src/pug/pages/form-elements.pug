@@ -11,6 +11,8 @@ include ../layout/components/buttons/border-button
 include ../layout/components/buttons/text-button
 include ../layout/components/buttons/long-button
 include ../layout/components/buttons/toggle-button
+include ../layout/components/buttons/likes-button
+include ../layout/components/buttons/rate-button
 include ../layout/components/checkboxes/rich-checkbox-buttons
 include ../layout/components/checkboxes/expandable-checkbox-list
 include ../layout/components/bullet-list
@@ -35,6 +37,13 @@ block content
                 +toggle-button('Получать спецпредложения')
             +e.checkbox
                 h3 like button
+                +e.likes
+                    +likes-button(2, false)
+                    +likes-button(12, true)
+            +e.checkbox
+                h3 rate button
+                +rate-button
+
         +b.buttons
             +e.button
                 +range-slider('Range Slider')

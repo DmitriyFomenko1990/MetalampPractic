@@ -1,0 +1,7 @@
+mixin likes-button(amount, isActive)
+    if isActive
+        +b.BUTTON.likes-button._active.like-js= amount
+    else
+        +b.BUTTON.likes-button.like-js= amount
+
+
