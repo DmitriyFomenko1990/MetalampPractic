@@ -1,0 +1,12 @@
+include ./buttons/likes-button
+mixin comment(image, name, date, description, likes, isLiked)
+    +b.comment
+        +e.head
+            +e.IMG(src="src/img/avatars/"+image).avatar
+            +e.info
+                +e.nick-name= name
+                +e.date= date
+        +e.content
+            +e.likes
+                +likes-button(likes, isLiked)
+            +e.description= description
