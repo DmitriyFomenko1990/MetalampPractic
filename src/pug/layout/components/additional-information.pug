@@ -1,0 +1,6 @@
+mixin additional-information(image, title, description)
+    +b.additional-information
+        +e.IMG(src="src/img/icons/"+image).image
+        +e.info
+            +e.P.title= title
+            +e.P.description= description

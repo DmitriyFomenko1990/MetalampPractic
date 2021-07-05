@@ -64,6 +64,12 @@
 }
 .dropdown-right{
   grid-area: l;
+  &__additional-info{
+    margin-top: 290px;
+    & > div{
+      margin-bottom: 20px;
+    }
+  }
 }
 .dropdown-center{
   grid-area: cc;
