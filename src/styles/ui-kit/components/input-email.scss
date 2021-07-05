@@ -9,7 +9,7 @@
   @extend .common-body-dark75;
 
   &::placeholder{
-    color: $dark-shade-25;
+    color: $dark-shade-25!important;
   }
 
   &:hover, &:focus{

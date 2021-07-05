@@ -32,3 +32,18 @@ slider.noUiSlider.on('update', function (values, handle) {
         marginMin.innerHTML = values[handle];
     }
 });
+
+const isLike = document.querySelectorAll('.like-js')
+
+isLike?.forEach(block => likeToggle(block) )
+
+function likeToggle(block){
+    block.addEventListener("click", () => {
+        block.classList.contains("likes-button_active")
+            ? --block.innerHTML
+            : ++block.innerHTML
+        block.classList.toggle("likes-button_active");
+    });
+}
+
+
