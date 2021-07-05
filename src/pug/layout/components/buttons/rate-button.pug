@@ -1,2 +1,7 @@
-mixin rate-button
+mixin rate-button(rating)
     +b.rate-button
+        each val in [1, 2, 3, 4, 5]
+            if (val <= rating)
+                +e.star._active
+            else
+                +e.star
