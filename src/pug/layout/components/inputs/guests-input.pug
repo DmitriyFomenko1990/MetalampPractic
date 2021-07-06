@@ -6,4 +6,22 @@ mixin guests-input
             name='guests'
             readonly
         ).input
-        +e.BUTTON.dropdown
+        +e.BUTTON.dropdown-button
+        +e.dropdown-feld
+            +e.type-wrapper
+                +e.H3.type взрослые
+                +e.H3.type дети
+                +e.H3.type младенцы
+            +e.controllers
+             +e.controller-wrapper
+                +e.BUTTON.button._less
+                +e.H3.amount 0
+                +e.BUTTON.button._more
+             +e.controller-wrapper
+                 +e.BUTTON.button._less
+                 +e.H3.amount 0
+                 +e.BUTTON.button._more
+             +e.controller-wrapper
+                 +e.BUTTON.button._less
+                 +e.H3.amount 0
+                 +e.BUTTON.button._more
