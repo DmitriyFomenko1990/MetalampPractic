@@ -1,6 +1,7 @@
 import noUiSlider from 'nouislider';
 import wNumb from './js/wNumb'
 import "./styles/index.scss";
+import $ from "jquery";
 
 
 
@@ -33,6 +34,25 @@ slider.noUiSlider.on('update', function (values, handle) {
     }
 });
 
+$(document).ready(function(){
+    const isLike = $(".like-js");
+    const activeClass = 'likes-button_active';
+    isLike.click(function(e){
+        if ($(this).hasClass(activeClass)){
+            $(this).text(function (i, b){
+                return --b
+            })
+        } else {
+            $(this).text(function (i, b){
+                return ++b
+            })
+        }
+        $(this).toggleClass(activeClass)
+    });
+});
+
+
+/*
 const isLike = document.querySelectorAll('.like-js')
 
 isLike?.forEach(block => likeToggle(block) )
@@ -45,5 +65,6 @@ function likeToggle(block){
         block.classList.toggle("likes-button_active");
     });
 }
+*/
 
 
