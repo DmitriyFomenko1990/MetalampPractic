@@ -1,2 +1,3 @@
-mixin border-button(title)
-    +b.BUTTON.border-button= title
+mixin border-button(title, size)
+    +b.BUTTON(class= size).border-button
+        +e.SPAN.value= title
