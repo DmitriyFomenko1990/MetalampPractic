@@ -3,10 +3,7 @@ import wNumb from './js/wNumb';
 import "./styles/index.scss";
 import $ from "jquery";
 
-
-
 let slider = document.getElementById('slider');
-
 noUiSlider.create(slider, {
     start: [5000, 10000],
     step: 10,
@@ -36,15 +33,22 @@ slider.noUiSlider.on('update', function (values, handle) {
 
 $(document).ready(function(){
     /* guest input dropdown */
+    const guestBlock = $(".guests-block-js");
     const guestDropdownButton = $(".guests-dropdown-button-js");
     const guestInput = $(".input-guests-js");
     const guestDropdown = $(".guests-dropdown-js");
     const guestClearBtn = $(".quest-clean-js");
     const allCounters = $(".guest-counter-js");
-
+    /* show-hide dropdown*/
     guestDropdownButton.click(function (){
         guestDropdown.toggleClass("guests-input__dropdown-wrapper_active");
         guestInput.toggleClass("guests-input__input_active");
+    });
+    $(document).mouseup(function (e){
+        if (!guestBlock.is(e.target)
+            && guestBlock.has(e.target).length === 0) {
+            guestDropdown.removeClass("guests-input__dropdown-wrapper_active");
+        }
     });
     /* guest more button */
     const moreBtn =$(".more-js");
@@ -108,7 +112,6 @@ $(document).ready(function(){
             return "0"
         });
     });
-});
     /* like button */
     const isLike = $(".like-js");
     const activeClass = "likes-button_active";
@@ -124,6 +127,11 @@ $(document).ready(function(){
         }
         $(this).toggleClass(activeClass);
     });
-
-
-
+    /* EXPANDABLE CHECKBOX LIST */
+    const checkboxBtn = $(".expandable-checkbox-button-js");
+    const checkboxList = $(".expandable-checkbox-list-js");
+    checkboxBtn.click(function (){
+        checkboxList.fadeToggle(500)
+        checkboxBtn.toggleClass("expandable-checkbox-list__list-opener_active")
+    })
+});
