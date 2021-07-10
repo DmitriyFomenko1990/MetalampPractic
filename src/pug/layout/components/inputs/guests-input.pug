@@ -5,23 +5,27 @@ mixin guests-input(width)
             value='Сколько гостей'
             name='guests'
             readonly
-        ).input
-        +e.BUTTON.dropdown-button
-        +e.dropdown-feld
-            +e.type-wrapper
-                +e.H3.type взрослые
-                +e.H3.type дети
-                +e.H3.type младенцы
-            +e.controllers
-             +e.controller-wrapper
-                +e.BUTTON.button._less
-                +e.H3.amount 0
-                +e.BUTTON.button._more._active
-             +e.controller-wrapper
-                 +e.BUTTON.button._less
-                 +e.H3.amount 0
-                 +e.BUTTON.button._more._active
-             +e.controller-wrapper
-                 +e.BUTTON.button._less
-                 +e.H3.amount 0
-                 +e.BUTTON.button._more._active
+        ).input(class= "input-guests-js")
+        +e.BUTTON.dropdown-button(class ="guests-dropdown-button-js")
+        +e.dropdown-wrapper(class ="guests-dropdown-js")
+            +e.selection-wrapper
+                +e.type-wrapper
+                    +e.H3.type взрослые
+                    +e.H3.type дети
+                    +e.H3.type младенцы
+                +e.controllers
+                    +e.controller-wrapper
+                        +e.BUTTON.button._less(class= "less-js")
+                        +e.H3.amount(class= "guest-counter-js") 0
+                        +e.BUTTON.button._more._active(class= "more-js")
+                    +e.controller-wrapper
+                        +e.BUTTON.button._less(class= "less-js")
+                        +e.H3.amount(class= "guest-counter-js") 0
+                        +e.BUTTON.button._more._active(class= "more-js")
+                    +e.controller-wrapper
+                        +e.BUTTON.button._less(class= "less-js")
+                        +e.H3.amount(class= "guest-counter-js") 0
+                        +e.BUTTON.button._more._active(class= "more-js")
+            +e.command-wrapper
+                +e.H3.clean(class = "quest-clean-js") очистить
+                +e.H3.accept применить
