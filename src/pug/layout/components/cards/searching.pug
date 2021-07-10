@@ -1,0 +1,13 @@
+include ../inputs/date-input
+include ../inputs/guests-input
+include ../buttons/long-button
+
+mixin searching
+    +b.searching-container
+        +e.H1.header Найдём номера под ваши пожелания
+        +e.dates
+            +date-input('прибытие', 'date-input_small')
+            +date-input('выезд', 'date-input_small')
+        +e.guests
+            +guests-input('гости')
+        +long-button('подобрать номер')

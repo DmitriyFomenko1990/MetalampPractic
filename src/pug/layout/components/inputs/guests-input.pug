@@ -1,5 +1,6 @@
-mixin guests-input(width)
+mixin guests-input(title)
     +b.guests-input(class= "guests-block-js")
+        +e.H3.header= title
         +e.INPUT(
             type='text'
             value='Сколько гостей'

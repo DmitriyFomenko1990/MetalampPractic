@@ -1,4 +1,4 @@
-mixin date-input(title)
+mixin date-input(title,size)
     +b.date-input
         +e.H3.title= title
         +e.INPUT(
@@ -6,4 +6,4 @@ mixin date-input(title)
             placeholder='ДД.ММ.ГГГГ'
             name='date'
             pattern = '[0-9]{2}-[0-9]{2}-[0-9]{4}'
-        ).input
+        ).input(class= size)
