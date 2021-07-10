@@ -7,10 +7,8 @@
     border: 1px solid $dark-shade-25;
     border-radius: 4px;
     padding: 0 15px;
+    cursor: auto;
     @extend .common-body-dark75;
-    &:hover, &:focus{
-      border: 1px solid $dark-shade-50;
-    }
     &_active{
       border: 1px solid $dark-shade-50;
       border-radius: 4px 4px 0 0;
