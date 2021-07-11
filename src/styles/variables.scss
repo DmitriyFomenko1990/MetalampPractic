@@ -1,4 +1,4 @@
-$dark-shade-100p:  #1F2041;
+$dark-shade-100:  #1F2041;
 $dark-shade-75:  rgba(31, 32, 65, 0.75);
 $dark-shade-50: rgba(31, 32, 65, 0.5);
 $dark-shade-25: rgba(31, 32, 65, 0.25);
@@ -13,20 +13,20 @@ $white: #FFFFFF;
   font-size: 24px;
   line-height: 29px;
   font-family: Montserrat-Bold, sans-serif;
-  color: $dark-shade-100p;
+  color: $dark-shade-100;
 }
 @mixin common-title-h2{
   font-family: Montserrat-Bold, sans-serif;
   font-size: 19px;
   line-height: 23px;
-  color: $dark-shade-100p;
+  color: $dark-shade-100;
 }
 @mixin common-title-h3{
   font-family: Montserrat-Bold, sans-serif;
   font-size: 12px;
   line-height: 15px;
   padding-top: 4px;
-  color: $dark-shade-100p;
+  color: $dark-shade-100;
 }
 @mixin common-body-dark75{
   font-family: Montserrat-Regular, sans-serif;
@@ -34,6 +34,7 @@ $white: #FFFFFF;
   line-height: 24px;
   color: $dark-shade-75;
 }
+
 @mixin common-dark50 {
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
@@ -58,13 +59,7 @@ $white: #FFFFFF;
   line-height: 15px;
   text-transform: uppercase;
 }
-@mixin pagination-selected {
-  font-family: Montserrat-Bold, sans-serif;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
+
 
 @mixin card-box{
   background: $white;

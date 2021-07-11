@@ -8,19 +8,20 @@ include ../buttons/border-button
 mixin registration
     +b.registration-card
         h1 Регистрация аккаунта
-        +e.name-data
-            +text-input('text', 'name', 'Имя',)
-            +text-input('text', 'surname', 'Фамилия',)
-        +radio-buttons
-        +e.birthday-data
-            +date-input('дата рождения', 'date-input_large')
-        +e.registration-data
-            h3 данные для входа в сервис
-            +text-input('text', 'email', 'Email',)
-            +text-input('password', 'password', 'Пароль',)
-        +toggle-button('Получать спецпредложения')
-        +e.accept-buttom
-             +long-button('перейти к оплате')
+        form
+            +e.name-data
+                +text-input('text', 'name', 'Имя',)
+                +text-input('text', 'surname', 'Фамилия',)
+            +radio-buttons
+            +e.birthday-data
+                +date-input('дата рождения', 'date-input_large')
+            +e.registration-data
+                h3 данные для входа в сервис
+                +text-input('text', 'email', 'Email',)
+                +text-input('password', 'password', 'Пароль',)
+            +toggle-button('Получать спецпредложения')
+            +e.accept-buttom
+                 +long-button('перейти к оплате')
         +e.login
             p Уже есть аккаунт на Toxin
             +border-button('войти' ,'border-button_large')

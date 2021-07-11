@@ -3,10 +3,11 @@ include ../buttons/long-button
 mixin login
     +b.login-card
         h1 Войти
-        +e.login-inputs
-            +text-input('text', 'email', 'Email',)
-            +text-input('password', 'password', 'Пароль',)
-        +long-button('войти')
+        form
+            +e.login-inputs
+                +text-input('text', 'email', 'Email',)
+                +text-input('password', 'password', 'Пароль',)
+            +long-button('войти')
         +e.create
             p Нет аккаунта на Toxin?
             +border-button('создать' ,'border-button_large')

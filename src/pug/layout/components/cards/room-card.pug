@@ -1,3 +1,30 @@
-mixin room-card
+mixin room-card(number, type, price)
     +b.room-card
-        h1 yo-yo-yo
+        +e.header
+            +e.title
+                +e.SPAN.char №
+                +e.H1.number= number
+                +e.H3.type= type
+            +e
+                +e.SPAN.price= price
+                +e.SPAN.desc в сутки
+        form
+            +e.dates
+                +date-input('прибытие', 'date-input_small')
+                +date-input('выезд', 'date-input_small')
+            +e.guests
+                +guests-input('гости')
+            +e.cost
+                span 9 990₽ х 4 суток
+                span 39 960₽
+            +e.services
+                +e.SPAN.info Сбор за услуги: скидка 2 179₽
+                span 0₽
+            +e.additional-services
+                +e.SPAN.info Сбор за дополнительные услуги
+                span 300₽
+            +e.total
+                h2 Итого
+                +e.spase-between
+                h2 38 081₽
+            +long-button('забронировать')
