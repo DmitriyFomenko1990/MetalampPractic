@@ -41,7 +41,7 @@
   }
   &__value{
     position: inherit;
-    @extend .common-button;
+    @include common-button;
     z-index: 3;
     transition: opacity 0.5s;
     color: $purple;

@@ -1,7 +1,7 @@
 @import "../../../variables";
 
 .text-button{
-  @extend .common-button;
+  @include common-button;
   background: none;
   color: $purple;
   transition: color 0.5s;

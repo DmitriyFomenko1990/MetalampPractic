@@ -17,12 +17,12 @@
     background: none;
   }
   &__unselected-btn{
-    @extend .common-button;
+    @include common-button;
     font-family: Montserrat-Regular, sans-serif!important;
     color: $dark-shade-50;
   }
   &__selected-page{
-    @extend .common-button;
+    @include common-button;
     background: linear-gradient(180deg, $purple 0%, $blue 100%);
     border-radius: 50%;
     color: $white;
@@ -42,6 +42,6 @@
 }
 .pagination-footer{
   margin-top: 10px;
-  @extend .common-body-dark75;
+  @include common-body-dark75;
   text-transform: none;
 }

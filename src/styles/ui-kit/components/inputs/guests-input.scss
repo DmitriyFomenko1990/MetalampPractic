@@ -12,7 +12,7 @@
     border-radius: 4px;
     padding: 0 15px;
     cursor: auto;
-    @extend .common-body-dark75;
+    @include common-body-dark75;
     &_active{
       border: 1px solid $dark-shade-50;
       border-radius: 4px 4px 0 0;

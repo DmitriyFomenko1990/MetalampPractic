@@ -19,7 +19,7 @@
     display: inline-flex;
     align-items: center;
     width: 100%;
-    @extend .common-label;
+    @include common-label;
     &:before{
       content: "";
       cursor: pointer;

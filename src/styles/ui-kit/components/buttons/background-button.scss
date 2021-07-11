@@ -5,7 +5,7 @@
   height: 44px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-  @extend .common-button;
+  @include common-button;
   color: $white;
   transition: opacity 0.5s;
   &:hover{

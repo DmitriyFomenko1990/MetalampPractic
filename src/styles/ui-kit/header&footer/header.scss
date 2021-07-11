@@ -17,7 +17,7 @@
     align-items: center;
   }
   &__item{
-    @extend .common-dark50;
+    @include common-dark50;
     margin-right: 20px;
     white-space: nowrap;
     cursor: pointer;
@@ -50,7 +50,7 @@
     margin-right: 20px;
     border-radius: 22px;
     box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
-    @extend .common-title-h3;
+    @include common-title-h3;
     background-color: #FFFFFF;
     text-transform: uppercase;
     color: #BC9CFF!important;
@@ -71,12 +71,12 @@
     height: 34px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
-    @extend .common-title-h3;
+    @include common-title-h3;
     text-transform: uppercase;
     color: #FFFFFF!important;
   }
   &__nick-name{
-    @extend .common-dark50;
+    @include common-dark50;
     position: relative;
     padding-left: 20px;
     white-space: nowrap;

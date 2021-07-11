@@ -6,12 +6,12 @@
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   padding: 0 15px;
-  @extend .common-body-dark75;
+  @include common-body-dark75;
   &::placeholder{
     color: $dark-shade-25;
   }
   &:hover, &:focus{
-    @extend .common-body-dark75;
+    @include common-body-dark75;
     border: 1px solid $dark-shade-50;
     &::placeholder{
        color: $dark-shade-75;

@@ -9,50 +9,50 @@ $blue: #8BA4F9;
 $green: #6FCF97;
 $white: #FFFFFF;
 
-.common-title-h1{
+@mixin common-title-h1{
   font-size: 24px;
   line-height: 29px;
   font-family: Montserrat-Bold, sans-serif;
   color: $dark-shade-100p;
 }
-.common-title-h2{
+@mixin common-title-h2{
   font-family: Montserrat-Bold, sans-serif;
   font-size: 19px;
   line-height: 23px;
   color: $dark-shade-100p;
 }
-.common-title-h3{
+@mixin common-title-h3{
   font-family: Montserrat-Bold, sans-serif;
   font-size: 12px;
   line-height: 15px;
   padding-top: 4px;
   color: $dark-shade-100p;
 }
-.common-body-dark75{
+@mixin common-body-dark75{
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: $dark-shade-75;
 }
-.common-dark50 {
+@mixin common-dark50 {
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
   line-height: 17px;
   color: $dark-shade-50;
 }
-.common-body-dark25{
+@mixin common-body-dark25{
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: $dark-shade-25;
 }
-.common-label{
+@mixin common-label{
   font-size: 14px;
   line-height: 18px;
   color: $dark-shade-50;
 }
 
-.common-button{
+@mixin common-button{
   font-family: Montserrat-Bold, sans-serif;
   font-size: 12px;
   line-height: 15px;

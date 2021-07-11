@@ -3,6 +3,7 @@ include ../layout/head
 include ../layout/components/cards/searching
 include ../layout/components/cards/registration
 include ../layout/components/cards/login
+include ../layout/components/cards/room-card
 
 
 block content
@@ -15,6 +16,8 @@ block content
             +e.registration
             +registration
         +e.central-block
+            +e.room
+                +room-card
             +e.login
                 +login
 

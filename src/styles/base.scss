@@ -17,14 +17,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit; margin: 0}
 /*--------------------*/
 
 body{
-    @extend .common-body-dark75;
+    @include common-body-dark75;
 }
 h1{
-    @extend .common-title-h1;
+    @include common-title-h1;
 }
 h2{
-    @extend .common-title-h2;
+    @include common-title-h2;
 }
 h3{
-    @extend .common-title-h3;
+    @include common-title-h3;
 }

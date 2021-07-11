@@ -16,7 +16,7 @@
     text-transform: uppercase;
   }
   &__navigation-item{
-    @extend .common-dark50;
+    @include common-dark50;
     padding-top: 20px;
     text-transform: none;
     &:first-child{
@@ -27,7 +27,7 @@
     max-width: 260px;
   }
   &__subscription-description{
-    @extend .common-body-dark75;
+    @include common-body-dark75;
     padding: 21px 0 20px;
   }
 }
@@ -40,7 +40,7 @@
   align-items: center;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   &__copyright{
-    @extend .common-body-dark75;
+    @include common-body-dark75;
   }
   &__social-btn{
     width: 24px;
