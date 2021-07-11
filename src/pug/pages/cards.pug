@@ -1,8 +1,21 @@
 extends ./extend
 include ../layout/head
 include ../layout/components/cards/searching
+include ../layout/components/cards/registration
+include ../layout/components/cards/login
+
+
 block content
     +b.header-cards
         +head
     +b.cards-wrapper
-        +searching
+        +e.rigth-block
+            +e.searching
+                +searching
+            +e.registration
+            +registration
+        +e.central-block
+            +e.login
+                +login
+
+
