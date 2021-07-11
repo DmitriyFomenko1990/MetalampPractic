@@ -4,13 +4,14 @@ include ../layout/components/cards/searching
 include ../layout/components/cards/registration
 include ../layout/components/cards/login
 include ../layout/components/cards/room-card
+include ../layout/components/cards/room-preview
 
 
 block content
     +b.header-cards
         +head
     +b.cards-wrapper
-        +e.rigth-block
+        +e.left-block
             +e.searching
                 +searching
             +e.registration
@@ -20,5 +21,7 @@ block content
                 +room-card('888', 'люкс','9 990₽')
             +e.login
                 +login
-
+        +e.rigth-block
+            +room-preview('./img/rooms-previews/2510dccc3aab21597da711673f509391.png', '888', 'люкс','9 990₽', '145', 5)
+            +room-preview('./img/rooms-previews/c196edfce8e208d3d142ceb4cd85380f.png', '840', '','9 990₽', '65', 4)
 

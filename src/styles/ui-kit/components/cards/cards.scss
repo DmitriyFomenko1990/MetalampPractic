@@ -13,4 +13,9 @@
   &__room{
     margin-bottom: 40px;
   }
+  &__rigth-block{
+    & > div{
+      margin-bottom: 40px;
+    }
+  }
 }

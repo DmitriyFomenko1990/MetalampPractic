@@ -1,1 +1,21 @@
-mixin
+include ../buttons/rate-button
+mixin room-preview(img, number, type, price, count, rate)
+    +b.room-preview
+        +e.IMG(src= img
+                alt="room").image
+        +e.wrapper
+            +e.description
+                +e.title
+                    +e.SPAN.char №
+                    +e.H1.number= number
+                    +e.H3.type= type
+                +e
+                    +e.SPAN.price= pricer
+                    +e.SPAN.desc в сутки
+            +e.comment
+                +rate-button(rate)
+                +e
+                    +e.SPAN.price= count
+                    +e.SPAN.desc в сутки
+
+
