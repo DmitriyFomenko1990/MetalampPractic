@@ -22,13 +22,6 @@
   &__input-block{
     max-width: 320px;
     margin-bottom: 20px;
-    &_duble-date{
-      display: flex;
-      justify-content: space-between;
-      & > div{
-        max-width: 150px;
-      }
-    }
   }
 }
 .subscription-ui{

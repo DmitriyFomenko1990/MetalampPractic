@@ -11,6 +11,7 @@ include ../layout/components/inputs/guests-input
 include ../layout/components/inputs/date-input
 include ../layout/components/inputs/rooms-input
 include ../layout/components/inputs/subscription-input
+include ../layout/components/inputs/interval-date-input
 include ../layout/components/buttons/checkbox-buttons
 include ../layout/components/buttons/radio-buttons
 include ../layout/components/buttons/background-button
@@ -37,14 +38,13 @@ block content
                 +guests-input('Dropdown')
             +e.input-block
                 +date-input('masked text field', 'ДД.ММ.ГГГГ', 'date-input_large')
-            +e.input-block_duble-date
-                +date-input('date Dropdown', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
-                +date-input('date Dropdown', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
+            +e.input-block
+                +interval-date-input
             +e.input-block
                 +e.H3.common-headers dropdown
                 +rooms-input
             +e.input-block
-                +date-input('filter date dropdown', '19 авг - 23 авг', 'date-input_large', '_arrow')
+                +date-input('filter date dropdown', '19 авг - 23 авг', 'date-input_large', '_arrow', 'datepicker1')
             +b.subscription-ui
                 +e.H3.common-headers subscription text field
                 +subscription-input

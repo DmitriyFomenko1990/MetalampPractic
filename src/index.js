@@ -1,12 +1,57 @@
 import "./styles/index.scss";
 import $ from "jquery";
 import "./js/jquery/jquery-ui"
+import 'owl.carousel';
+import flatpickr from "flatpickr";
+import { Russian } from "flatpickr/dist/l10n/ru.js"
 
+
+flatpickr("#datepicker1", {
+    "locale": Russian,
+    mode: "range",
+    minDate: "today",
+    dateFormat: "d M",
+    disable: [
+        function(date) {
+            return !(date.getDate() );
+        }
+    ],
+
+})
 $(document).ready(function(){
+    const a = $(".owl-carousel")
+    console.log(a)
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: true,
+        navClass: ["custom-nav", "custom-nav"],
+        navContainerClass: "custom-container-nav",
+        dotsClass: "custom-container-dots",
+        dotClass: "custom-dots"
+
+    });
+
     /* datepicker*/
-    $( function() {
-        $( "#datepicker" ).datepicker();
-    } );
+    // $("#datepicker1").flatpickr({
+    //
+    // });
+
+    // $( function() {
+    //     $( "#datepicker" ).datepicker({
+    //         range: 'period', // режим - выбор периода
+    //         numberOfMonths: 2,
+    //         onSelect: function(dateText, inst, extensionRange) {
+    //             // extensionRange - объект расширения
+    //             $('[name=startDate]').val(extensionRange.startDateText);
+    //             $('[name=endDate]').val(extensionRange.endDateText);
+    //         },
+    //         dateFormat: "dd.mm.yy",
+    //         minDate: 0,
+    //
+    //     });
+    // } );
     /* range-slider*/
     const mySlider = $( "#slider-range" );
     mySlider.slider({
@@ -137,4 +182,23 @@ $(document).ready(function(){
         checkboxList.fadeToggle(500)
         checkboxBtn.toggleClass("expandable-checkbox-list__list-opener_active")
     })
+
+    // $(function() {
+    //     $('#datepicker').datepicker({
+    //         range: 'period', // режим - выбор периода
+    //         numberOfMonths: 2,
+    //         onSelect: function(dateText, inst, extensionRange) {
+    //             // extensionRange - объект расширения
+    //             $('[name=startDate]').val(extensionRange.startDateText);
+    //             $('[name=endDate]').val(extensionRange.endDateText);
+    //         }
+    //     });
+    //
+    //     $('#datepicker').datepicker('setDate', ['+4d', '+8d']);
+    //
+    //     // объект расширения (хранит состояние календаря)
+    //     const extensionRange = $('#datepicker').datepicker('widget').data('datepickerExtensionRange');
+    //     if(extensionRange.startDateText) $('[name=startDate]').val(extensionRange.startDateText);
+    //     if(extensionRange.endDateText) $('[name=endDate]').val(extensionRange.endDateText);
+    // });
 });

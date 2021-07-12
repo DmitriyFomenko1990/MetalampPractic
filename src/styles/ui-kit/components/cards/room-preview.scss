@@ -5,6 +5,9 @@
   background: $white;
   box-shadow: 0 10px 20px $dark-shade-5;
   border-radius: 4px;
+  &__carousel{
+  position: relative;
+  }
   &__image{
     width: 270px;
     height: 151px;
@@ -54,4 +57,44 @@
     justify-content: space-between;
     padding-top: 8px;
   }
+}
+.custom-nav{
+  width: 44px;
+  height: 44px;
+  background: none;
+  font-size: 24px;
+  line-height: 24px;
+  color: $white;
+}
+.custom-container-nav{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+.custom-dots{
+  width: 7.5px;
+  height: 7.49px;
+  border: 1px solid $white;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: none;
+}
+.custom-container-dots{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 42px;
+  height: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.active{
+  background: $white;
+}
+.room-preview:hover .custom-container-nav{
+  opacity: 1;
 }

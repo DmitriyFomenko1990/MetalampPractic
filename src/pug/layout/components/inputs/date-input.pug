@@ -1,10 +1,9 @@
-mixin date-input(title, placeholder, size, withArrow)
+mixin date-input(title, placeholder, size, withArrow, datepicker)
     +b.date-input
         +e.H3.title= title
         +e.INPUT(
             type='text'
             placeholder= placeholder
             name='date'
-            pattern= '[0-9]{2}-[0-9]{2}-[0-9]{4}'
-        ).input(class = size id = 'datepicker')
+        ).input(class = size, id=datepicker)
         +e.BUTTON.dropdown-button(class= withArrow)
