@@ -36,13 +36,15 @@ block content
             +e.input-block
                 +guests-input('Dropdown')
             +e.input-block
-                +date-input('masked text field', 'date-input_large')
+                +date-input('masked text field', 'ДД.ММ.ГГГГ', 'date-input_large')
             +e.input-block_duble-date
-                +date-input('date Dropdown', 'date-input_small')
-                +date-input('date Dropdown', 'date-input_small')
+                +date-input('date Dropdown', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
+                +date-input('date Dropdown', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
             +e.input-block
                 +e.H3.common-headers dropdown
                 +rooms-input
+            +e.input-block
+                +date-input('filter date dropdown', '19 авг - 23 авг', 'date-input_large', '_arrow')
             +b.subscription-ui
                 +e.H3.common-headers subscription text field
                 +subscription-input

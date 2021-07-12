@@ -10,8 +10,8 @@ mixin room-card(number, type, price)
                 +e.SPAN.desc в сутки
         form
             +e.dates
-                +date-input('прибытие', 'date-input_small')
-                +date-input('выезд', 'date-input_small')
+                +date-input('прибытие', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
+                +date-input('выезд', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
             +e.guests
                 +guests-input('гости')
             +e.cost
