@@ -17,6 +17,28 @@
   color: $dark-shade-50;
 }
 
+.custom-slider {
+  background: $white;
+  border-radius: 3px;
+  border: 1px solid $dark-shade-25;
+  max-width: 266px;
+  height: 6px;
+}
+.custom-handle{
+  position: absolute;
+  top: -4px;
+  width: 12px!important;
+  height: 12px!important;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+}
+.custom-range{
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+  top: -1px;
+}
 /* Functional styling;
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.

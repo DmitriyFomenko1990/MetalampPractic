@@ -2,6 +2,7 @@ import noUiSlider from 'nouislider';
 import wNumb from './js/wNumb';
 import "./styles/index.scss";
 import $ from "jquery";
+import "./js/jquery/jquery-ui"
 
 // let slider = document.getElementById('slider');
 // noUiSlider.create(slider, {
@@ -32,6 +33,34 @@ import $ from "jquery";
 // });
 
 $(document).ready(function(){
+    /* range-slider*/
+    const mySlider = $( "#slider-range" );
+    mySlider.slider({
+        range: true,
+        'min': 0,
+        'max': 15700,
+        values: [ 5000, 10000 ],
+        classes: {
+            "ui-slider": "custom-slider",
+            "ui-widget": "custom-slider",
+            "ui-slider-handle": "custom-handle",
+            "ui-state-default": "custom-handle",
+            "ui-slider-range": "custom-range"
+        },
+        slide: function( event, ui ) {
+            $( "#amount" ).text(new Intl.NumberFormat('ru-RU').format(ui.values[ 0 ]) + "₽ - "
+                + new Intl.NumberFormat('ru-RU').format(ui.values[ 1 ]) + '₽');
+        }
+    });
+
+
+    const valueMin = mySlider.slider( "values", 0 );
+    const valueMax = mySlider.slider( "values", 1 );
+    $( "#amount" ).text(new Intl.NumberFormat('ru-RU').format(valueMin) + '₽' +
+        " - " + new Intl.NumberFormat('ru-RU').format(valueMax) + '₽' );
+
+
+
     /* guest input dropdown */
     const guestBlock = $(".guests-block-js");
     const guestDropdownButton = $(".guests-dropdown-button-js");
