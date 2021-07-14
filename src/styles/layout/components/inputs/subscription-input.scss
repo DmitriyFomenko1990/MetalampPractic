@@ -1,0 +1,26 @@
+.subscription-input{
+  &__form{
+    width: 100%;
+    position: relative;
+  }
+  &__submit{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-radius: 4px;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+  }
+  &__button-submit{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-radius: 4px;
+    background: url("../img/arrow_rigth.svg") center no-repeat #FFFFFF;
+  }
+}

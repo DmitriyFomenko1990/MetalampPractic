@@ -1,0 +1,11 @@
+@import "../../../variables";
+
+.text-button{
+  @include common-button;
+  background: none;
+  color: $purple;
+  transition: color 0.5s;
+  &:hover{
+    color: $dark-shade-50;
+  }
+}

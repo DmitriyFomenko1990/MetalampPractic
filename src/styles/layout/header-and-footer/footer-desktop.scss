@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.footer-desk{
+  background-color: #FFFFFF;
+  padding: 100px 140px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  &__content{
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__sentence{
+    max-width: 260px;
+  }
+  &__description-container{
+    margin-top: 18px;
+  }
+  &__navigation-title{
+    text-transform: uppercase;
+  }
+  &__navigation-item{
+    @include common-dark50;
+    padding-top: 20px;
+    text-transform: none;
+    &:first-child{
+      padding-top: 21px;
+    }
+  }
+  &__subscription{
+    max-width: 260px;
+  }
+  &__subscription-description{
+    @include common-body-dark75;
+    padding: 21px 0 20px;
+  }
+}

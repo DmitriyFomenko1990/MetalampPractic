@@ -1,0 +1,53 @@
+@import "../../../variables";
+.input-checkbox{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  &__field{
+    display: none;
+    &:checked + .input-checkbox__label{
+      &:after{
+        transform: scale(1);
+      }
+      &:before{
+        border-color: $purple;
+      }
+    }
+  }
+  &__label{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    @include common-label;
+    &:before{
+      content: "";
+      cursor: pointer;
+      align-self: flex-start;
+      flex: 0 0 20px;
+      height: 20px;
+      background: $white;
+      border: 1px solid $dark-shade-25;
+      border-radius: 4px;
+      margin: 0 10px 0 0 ;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      cursor: pointer;
+      top: 4px;
+      left: 5px;
+      width: 11px;
+      height: 11px;
+      background: url("../img/checkbox.svg") center no-repeat;
+      transition: 0.5s;
+      transform: scale(0);
+    }
+  }
+}
+.input-checkbox__field:checked + .input-checkbox__label::after{
+  transform: scale(1);
+}
+.input-checkbox__field:checked + .input-checkbox__label::before{
+  border-color: $purple;
+}

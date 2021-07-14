@@ -1,0 +1,47 @@
+@import "../../variables";
+.pagination-wrapper{
+  display: flex;
+  width: 240px;
+  flex-direction: column;
+  align-items: center;
+}
+.pagination{
+  width: 240px;
+  display: flex;
+  & > * {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+  &__unselected-btn{
+    @include common-button;
+    font-family: Montserrat-Regular, sans-serif!important;
+    color: $dark-shade-50;
+  }
+  &__selected-page{
+    @include common-button;
+    background: linear-gradient(180deg, $purple 0%, $blue 100%);
+    border-radius: 50%;
+    color: $white;
+  }
+  &__next-page-btn{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 50%;
+    position: relative;
+  }
+  &__arrow{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: 27px;
+  }
+}
+.pagination-footer{
+  margin-top: 10px;
+  @include common-body-dark75;
+  text-transform: none;
+}

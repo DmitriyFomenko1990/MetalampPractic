@@ -1,0 +1,29 @@
+.expandable-checkbox-list{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 266px;
+  align-items: center;
+  &__heaher{
+    text-transform: uppercase;
+  }
+  &__list-opener{
+    margin-top: 2px;
+    width: 28px;
+    height: 21px;
+    background: url("../img/arrow-down.svg") center no-repeat;
+    transition: 0.5s;
+    &_active{
+      transform: rotateX(180deg);
+    }
+  }
+  &__list-wrapper{
+    display: none;
+    max-width: 100%;
+    position: absolute;
+    top: 39px;
+    & > div {
+      margin-bottom: 10px;
+    }
+  }
+}

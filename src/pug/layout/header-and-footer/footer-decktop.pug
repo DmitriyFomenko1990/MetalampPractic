@@ -4,32 +4,33 @@ include ../components/inputs/subscription-input
 
 mixin footer-desktop
     +b.footer-desk
-        +e.__sentence
-            +logo
-            +e.__description-container
-                +e.P.__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-        +e.__navigation
-            +e.H3.__navigation-title навигация
-            +e.UL.__navigation-list
-                +e.LI.__navigation-item О нас
-                +e.LI.__navigation-item Новости
-                +e.LI.__navigation-item Служба поддержки
-                +e.LI.__navigation-item Услуги
-        +e.__about
-            +e.H3.__navigation-title о нас
-                +e.UL.__navigation-list
-                    +e.LI.__navigation-item О сервисе
-                    +e.LI.__navigation-item Наша команда
-                    +e.LI.__navigation-item Вакансии
-                    +e.LI.__navigation-item Инвесторы
-        +e.__support
-            +e.H3.__navigation-title Служба поддержки
-                +e.UL.__navigation-list
-                    +e.LI.__navigation-item Соглашения
-                    +e.LI.__navigation-item Сообщества
-                    +e.LI.__navigation-item Связь с нами
-        +e.__subscription
-            +e.H3.__navigation-title Подписка
-            +e.P.__subscription-description Получайте специальные предложения и новости сервиса
-            +subscription-input
+        +e.content
+            +e.sentence
+                +logo
+                +e.description-container
+                    +e.P.description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            +e.navigation
+                +e.H3.navigation-title навигация
+                +e.UL.navigation-list
+                    +e.LI.navigation-item О нас
+                    +e.LI.navigation-item Новости
+                    +e.LI.navigation-item Служба поддержки
+                    +e.LI.navigation-item Услуги
+            +e.about
+                +e.H3.navigation-title о нас
+                    +e.UL.navigation-list
+                        +e.LI.navigation-item О сервисе
+                        +e.LI.navigation-item Наша команда
+                        +e.LI.navigation-item Вакансии
+                        +e.LI.navigation-item Инвесторы
+            +e.support
+                +e.H3.navigation-title Служба поддержки
+                    +e.UL.navigation-list
+                        +e.LI.navigation-item Соглашения
+                        +e.LI.navigation-item Сообщества
+                        +e.LI.navigation-item Связь с нами
+            +e.subscription
+                +e.H3.navigation-title Подписка
+                +e.P.subscription-description Получайте специальные предложения и новости сервиса
+                +subscription-input
     +footer-copyrigth

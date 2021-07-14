@@ -1,7 +1,7 @@
 include  ../components/buttons/border-button
+include  ../components/buttons/background-button
+
 mixin login-buttons
-    +b.header__buttons
-        +e.BUTTON.__button-login войти
-        +b
-            +border-button('войти', 'border-button_small')
-        +e.BUTTON.__button-registration зарегистрироваться
+    +b.login-buttons
+        +border-button('войти', 'border-button_small')
+        +background-button('зарегистрироваться', 'background-button_long')

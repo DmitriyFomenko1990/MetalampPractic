@@ -1,0 +1,102 @@
+.element-head{
+  padding: 30px 30px 65px ;
+}
+.content{
+  padding: 0 140px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 10px;
+  grid-template-areas:
+          "tl rc tr"
+          "l cc cr"
+          "l br br";
+}
+
+.text-fields{
+  grid-area: tl;
+  &__common-headers{
+    margin-bottom:5px;
+    text-transform: uppercase;
+  }
+  &__input-block{
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+}
+.subscription-ui{
+  max-width: 267px;
+  margin-bottom: 20px;
+  &__common-headers{
+    margin-bottom:5px;
+    text-transform: uppercase;
+  }
+}
+.checkbox-buttons{
+  grid-area: rc;
+  h3 {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  &__checkbox{
+    padding-bottom: 40px;
+  }
+  &__likes{
+    button {
+      margin-right: 10px;
+    }
+  }
+  &__rating{
+    display: flex;
+    max-width: 300px;
+    & > div {
+      flex: 1 1 auto;
+      margin-right: 20px;
+    }
+  }
+}
+.button-header{
+  margin-bottom: 16px;
+}
+.buttons{
+  grid-area: tr;
+  &:first-child{
+    padding-top: 0;
+  }
+  &__button{
+    padding: 0 0 30px;
+  }
+  &__pagination-block{
+    padding-top: 25px;
+    text-transform: uppercase;
+  }
+  &__pagination-title{
+    margin-bottom: 16px;
+  }
+}
+.dropdown-right{
+  grid-area: l;
+  &__additional-info{
+    margin-top: 290px;
+    & > div{
+      margin-bottom: 20px;
+    }
+  }
+}
+.dropdown-center{
+  grid-area: cc;
+  h3 {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+}
+.dropdown-left{
+  grid-area: cr;
+  h3 {
+    margin-bottom: 13px;
+    text-transform: uppercase;
+  }
+}
+.comments{
+  grid-area: br;
+}

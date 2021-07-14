@@ -1,0 +1,39 @@
+@import "../../variables";
+.button-arrow{
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  width: 17px;
+  height: 20px;
+}
+.arrow{
+  position: relative;
+  top: 5px;
+  width: 14px;
+  height: 2px;
+  background-color: $white;
+  left: 1px;
+  display: block;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    top: -3px;
+    right: -3px;
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    top: 3px;
+    right: -3px;
+
+    background-color: $white;
+    transform: rotate(-45deg);
+  }
+}

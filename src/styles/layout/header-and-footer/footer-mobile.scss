@@ -1,0 +1,27 @@
+.footer-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 120px 0;
+  .footer {
+    padding: 0;
+    box-shadow: none;
+    &__content {
+      flex-direction: column;
+      box-shadow: none;
+      height: initial;
+    }
+
+    &__copyright {
+      padding: 22px 0 22px;
+    }
+    &__social{
+      display: flex;
+      justify-content: center;
+      button{
+        margin: 0 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.header-and-footer{
+  width: 100%;
+  background: #E5E5E5;
+  padding-bottom: 140px;
+  &__head{
+    padding: 30px 30px 62px;
+  }
+  &__registered{
+    margin: 40px 0;
+  }
+  &__footer-mobile{
+    width: 768px;
+    height: 367px;
+    margin: 40px auto 0;
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  }
+}

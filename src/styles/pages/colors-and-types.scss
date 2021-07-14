@@ -1,0 +1,73 @@
+@import "../variables";
+
+.head-types{
+  padding: 30px 30px 67px;
+}
+.wrapper-types{
+  padding: 0 158px 0 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.color-type{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &__example{
+      width: 70px;
+      height: 70px;
+
+      border-radius: 6px;
+      margin-right: 40px ;
+      &_dark-100{
+        background: $dark-shade-100;
+      }
+      &_dark-75{
+        background: $dark-shade-75;
+      }
+      &_dark-50{
+        background: $dark-shade-50;
+      }
+      &_dark-25{
+        background: $dark-shade-25;
+      }
+      &_dark-5{
+        background: $dark-shade-5;
+      }
+      &_green{
+        background: $green;
+      }
+      &_purple{
+        background: $purple;
+      }
+    }
+    &__description{
+      font-size: 19px;
+      line-height: 28px;
+    }
+    &__color-name{
+      font-family: Montserrat-Bold, sans-serif;
+    }
+}
+.font-type{
+  display: grid;
+
+  grid-template-columns: 70px 370px;
+  grid-template-rows: repeat(4, max-content) ;
+  &__name{
+    margin-right: 30px;
+    text-align: right;
+    & h1, h2, h3, p{
+      font-family: Montserrat-Regular, sans-serif;
+      color: $dark-shade-25;
+    }
+  }
+  &__example{
+    margin-bottom: 51px;
+    &_body{
+      max-width: 301px;
+    }
+    &_uppercase{
+      text-transform: uppercase;
+    }
+  }
+}

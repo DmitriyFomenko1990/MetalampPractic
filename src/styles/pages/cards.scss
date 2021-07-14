@@ -1,0 +1,21 @@
+.header-cards{
+  padding: 30px 30px 72px;
+}
+.cards-wrapper{
+  padding: 0 140px 140px;
+  display: flex;
+  &__searching{
+    margin-bottom: 40px;
+  }
+  &__central-block{
+    margin: 0 40px 0;
+  }
+  &__room{
+    margin-bottom: 40px;
+  }
+  &__rigth-block{
+    & > div{
+      margin-bottom: 40px;
+    }
+  }
+}

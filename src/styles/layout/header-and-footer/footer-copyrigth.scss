@@ -1,0 +1,30 @@
+@import "../../variables";
+.footer{
+  background-color: $white;
+  padding: 25px 140px 18px;
+  box-shadow: 0 10px 20px $dark-shade-5;
+  &__content{
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copyright{
+    @include common-body-dark75;
+    line-height: 17px;
+  }
+  &__social-btn{
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    &_twitter{
+      background: url("../img/footer/twitter.svg") center no-repeat #FFFFFF;
+    }
+    &_facebook{
+      background: url("../img/footer/facebook.svg") center no-repeat #FFFFFF;
+    }
+    &_instagram{
+      background: url("../img/footer/instagram.svg") center no-repeat #FFFFFF;
+    }
+  }
+}

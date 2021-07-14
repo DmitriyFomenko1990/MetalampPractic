@@ -1,0 +1,11 @@
+.rate-button{
+  display: flex;
+  &__star{
+    flex: 0 0 24px;
+    height: 24px;
+    background: url("../img/buttons/star.svg") no-repeat center;
+    &_active{
+      background: url("../img/buttons/star-active.svg") no-repeat center;
+    }
+  }
+}

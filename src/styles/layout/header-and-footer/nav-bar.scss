@@ -1,0 +1,31 @@
+@import "../../variables";
+.nav-bar{
+  display: flex;
+  align-items: center;
+  &__item{
+    @include common-dark50;
+    padding-right: 21px;
+    white-space: nowrap;
+    cursor: pointer;
+    &:last-child{
+      padding-right: 0;
+    }
+    &_arrow{
+      position: relative;
+      &:after{
+        content: "";
+        border: solid $dark-shade-50;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        margin: 0 6px 2px 8px;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+    &_about{
+      font-family: Montserrat-Bold, sans-serif;
+      color: $dark-shade-75;
+    }
+  }
+}
