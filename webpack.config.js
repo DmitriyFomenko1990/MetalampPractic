@@ -28,7 +28,7 @@ const HWPConfig = new HTMLWebpackPlugin({
     filename: 'index.html'
 });
 
-const htmlPages = ['index', 'header-and-footer', 'colors-and-types', 'form-elements', 'cards'];
+const htmlPages = ['index', 'header-and-footer', 'colors-and-types', 'form-elements', 'cards', 'landing-page', 'registration', 'sing-in'];
 const multiplesHtml = htmlPages.map(function(entryName) {
     return new HTMLWebpackPlugin({
         filename: entryName + '.html',

@@ -1,0 +1,11 @@
+extends ./extend
+include ../layout/header-and-footer/header-guest
+include ../layout/header-and-footer/footer-decktop
+include ../layout/components/cards/searching
+
+block content
+    +header-quest
+    +b.content-landing
+        +e.content-wrapper
+            +searching
+    +footer-desktop
