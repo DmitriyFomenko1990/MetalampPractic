@@ -36,6 +36,34 @@ flatpickr("#datepicker1", {
             }
         ],
 });
+flatpickr("#datepicker-date", {
+    "locale": Russian,
+    dateFormat: "d.m.yy ",
+    closeOnSelect: false,
+    monthSelectorType: "static",
+    yearSelectorType: "static",
+    nextArrow : "",
+    prevArrow : "",
+    plugins: [
+        ShortcutButtonsPlugin({
+            button: [{
+                label: 'очистить',
+            },
+                {
+                    label: 'применить',
+                },],
+            onClick: (index, fp) => {
+                fp.clear();
+                fp.close();
+            }
+        }),
+    ],
+    disable: [
+        function(date) {
+            return !(date.getDate() );
+        }
+    ],
+});
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         items: 1,
