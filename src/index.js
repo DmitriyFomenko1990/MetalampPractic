@@ -4,23 +4,39 @@ import "./js/jquery/jquery-ui"
 import 'owl.carousel';
 import flatpickr from "flatpickr";
 import { Russian } from "flatpickr/dist/l10n/ru.js"
+import ShortcutButtonsPlugin from "shortcut-buttons-flatpickr/dist/shortcut-buttons-flatpickr"
 
 
 flatpickr("#datepicker1", {
     "locale": Russian,
     mode: "range",
-    minDate: "today",
     dateFormat: "d M",
-    disable: [
-        function(date) {
-            return !(date.getDate() );
+    closeOnSelect: false,
+    monthSelectorType: "static",
+    yearSelectorType: "static",
+    nextArrow : "",
+    prevArrow : "",
+    plugins: [
+        ShortcutButtonsPlugin({
+        button: [{
+            label: 'очистить',
+        },
+        {
+            label: 'применить',
+        },],
+        onClick: (index, fp) => {
+            fp.clear();
+            fp.close();
         }
+        }),
     ],
-
-})
+        disable: [
+            function(date) {
+                return !(date.getDate() );
+            }
+        ],
+});
 $(document).ready(function(){
-    const a = $(".owl-carousel")
-    console.log(a)
     $(".owl-carousel").owlCarousel({
         items: 1,
         loop: true,
