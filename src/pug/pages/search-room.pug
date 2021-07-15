@@ -1,0 +1,76 @@
+extends ./extend
+include ../layout/header-and-footer/header-guest
+include ../layout/header-and-footer/footer-decktop
+include ../layout/components/pagination
+include ../layout/components/inputs/date-input
+include ../layout/components/inputs/guests-input
+include ../layout/components/range-slider
+include ../layout/components/buttons/checkbox-buttons
+include ../layout/components/checkboxes/rich-checkbox-buttons
+include ../layout/components/checkboxes/expandable-checkbox-list
+include ../layout/components/cards/room-preview
+
+block content
+    +header-quest
+    +b.content-search-room
+        +e.filters
+            +date-input('даты пребывания в отеле', '19 авг - 23 авг', 'date-input_middle', '_arrow', 'datepicker1')
+            +guests-input('гости')
+            +e.coast
+                +range-slider('диапазон цены')
+                +e.P.explanation Стоимость за сутки пребывания в номере
+            +checkbox-buttons
+            +rich-checkbox-buttons
+            +expandable-checkbox-list
+        +e.rooms-block
+            +e.rooms
+                +room-preview('./img/rooms-previews/2510dccc3aab21597da711673f509391.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '888', 'люкс','9 990₽', '145', 5)
+                +room-preview('./img/rooms-previews/c196edfce8e208d3d142ceb4cd85380f.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '840', '','9 990₽', '65', 4)
+                +room-preview('./img/rooms-previews/1791c99bdf8b1c98ff3469ad7ae61424.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '980', 'люкс','8 500₽', '35', 3)
+                +room-preview('./img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '856', 'люкс','7 300₽', '19', 5)
+                +room-preview('./img/rooms-previews/190237d9570862add629ca51388cab2f.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '740', '','6 000₽', '44', 4)
+                +room-preview('./img/rooms-previews/913678abe8f61f3d02794a875c8f13d6.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '982', '','5 800₽', '56', 3)
+                +room-preview('./img/rooms-previews/d523bf8fa987bc74e26a23a8d5711a8a.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '678', '','5 500₽', '45', 5)
+                +room-preview('./img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '450', '','5 300₽', '39', 4)
+                +room-preview('./img/rooms-previews/cc01fba653b36e675f65924bdd6828eb.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '350', '','5 000₽', '77', 3)
+                +room-preview('./img/rooms-previews/b930b472e8006c33b4f26ab7e130a1da.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '666', '','5 000₽', '25', 5)
+                +room-preview('./img/rooms-previews/413691015542c6a7ba3d4f49fbb5f2b6.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/413691015542c6a7ba3d4f49fbb5f2b6.png', '444', '','5 000₽', '15', 3)
+                +room-preview('./img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png',
+                    './img/rooms-previews/5b146b0b02905e0f276597370834ff82.png',
+                    './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
+                    './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '352', '','5 000₽', '55', 3)
+            +pagination
+    +footer-desktop

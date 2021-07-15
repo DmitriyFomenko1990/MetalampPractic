@@ -74,9 +74,7 @@ $(document).ready(function(){
         navContainerClass: "custom-container-nav",
         dotsClass: "custom-container-dots",
         dotClass: "custom-dots"
-
     });
-
     /* datepicker*/
     // $("#datepicker1").flatpickr({
     //
@@ -115,15 +113,10 @@ $(document).ready(function(){
                 + new Intl.NumberFormat('ru-RU').format(ui.values[ 1 ]) + '₽');
         }
     });
-
-
     const valueMin = mySlider.slider( "values", 0 );
     const valueMax = mySlider.slider( "values", 1 );
     $( "#amount" ).text(new Intl.NumberFormat('ru-RU').format(valueMin) + '₽' +
         " - " + new Intl.NumberFormat('ru-RU').format(valueMax) + '₽' );
-
-
-
     /* guest input dropdown */
     const guestBlock = $(".guests-block-js");
     const guestDropdownButton = $(".guests-dropdown-button-js");
@@ -226,23 +219,4 @@ $(document).ready(function(){
         checkboxList.fadeToggle(500)
         checkboxBtn.toggleClass("expandable-checkbox-list__list-opener_active")
     })
-
-    // $(function() {
-    //     $('#datepicker').datepicker({
-    //         range: 'period', // режим - выбор периода
-    //         numberOfMonths: 2,
-    //         onSelect: function(dateText, inst, extensionRange) {
-    //             // extensionRange - объект расширения
-    //             $('[name=startDate]').val(extensionRange.startDateText);
-    //             $('[name=endDate]').val(extensionRange.endDateText);
-    //         }
-    //     });
-    //
-    //     $('#datepicker').datepicker('setDate', ['+4d', '+8d']);
-    //
-    //     // объект расширения (хранит состояние календаря)
-    //     const extensionRange = $('#datepicker').datepicker('widget').data('datepickerExtensionRange');
-    //     if(extensionRange.startDateText) $('[name=startDate]').val(extensionRange.startDateText);
-    //     if(extensionRange.endDateText) $('[name=endDate]').val(extensionRange.endDateText);
-    // });
 });

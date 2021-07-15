@@ -35,7 +35,6 @@ $white: #FFFFFF;
   line-height: 24px;
   color: $dark-shade-75;
 }
-
 @mixin common-dark50 {
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
@@ -53,15 +52,12 @@ $white: #FFFFFF;
   line-height: 18px;
   color: $dark-shade-50;
 }
-
 @mixin common-button{
   font-family: Montserrat-Bold, sans-serif;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
 }
-
-
 @mixin card-box{
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.12);
