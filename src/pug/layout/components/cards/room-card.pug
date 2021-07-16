@@ -1,5 +1,5 @@
 include ../inputs/guests-input
-include ../inputs/date-input
+include ../inputs/interval-date-input
 include ../buttons/long-button
 
 mixin room-card(number, type, price)
@@ -14,8 +14,7 @@ mixin room-card(number, type, price)
                 +e.SPAN.desc в сутки
         form
             +e.dates
-                +date-input('прибытие', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow', 'datepicker1')
-                +date-input('выезд', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
+                +interval-date-input('прибытие', 'выезд')
             +e.guests
                 +guests-input('гости')
             +e.cost

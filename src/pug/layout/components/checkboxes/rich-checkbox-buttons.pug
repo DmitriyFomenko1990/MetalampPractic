@@ -1,5 +1,7 @@
 include ../inputs/checkbox-input
 mixin rich-checkbox-buttons
     +b.rich-checkbox-buttons
-        +checkbox-input('rich-parameters', 'hallway', 'Широкий коридор', false)
-        +checkbox-input('rich-parameters', 'helper', 'Помощник для инвалидов', false)
+        +checkbox-input('rich-parameters', 'hallway', 'Широкий коридор', false, "label_rich")
+        +e.P.description._small Ширина коридоров в номере не менее 91 см.
+        +checkbox-input('rich-parameters', 'helper', 'Помощник для инвалидов', false, "label_rich")
+        +e.P.description._large На 1 этаже вас встретит специалист  и проводит до номера.

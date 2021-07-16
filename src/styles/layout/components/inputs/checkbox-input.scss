@@ -43,6 +43,10 @@
       transition: 0.5s;
       transform: scale(0);
     }
+    &_rich{
+      font-family: Montserrat-Bold, sans-serif;
+      color: $dark-shade-75;
+    }
   }
 }
 .input-checkbox__field:checked + .input-checkbox__label::after{

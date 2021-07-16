@@ -1,0 +1,19 @@
+@import "../../../variables";
+.rich-checkbox-buttons{
+  &__description{
+    padding-left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+    margin-bottom: 7px;
+    &_small{
+      max-width: 230px;
+    }
+    &_large{
+      max-width: 260px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

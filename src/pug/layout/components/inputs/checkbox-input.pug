@@ -1,4 +1,4 @@
-mixin checkbox-input(name, value, label, isChecked)
+mixin checkbox-input(name, value, label, isChecked, rich)
     +b.input-checkbox
         +e.INPUT(
             type='checkbox'
@@ -7,4 +7,4 @@ mixin checkbox-input(name, value, label, isChecked)
             checked= isChecked
             id= value
         ).__field
-        +e.LABEL(for= value).__label= label
+        +e.LABEL(for= value class= rich).__label= label

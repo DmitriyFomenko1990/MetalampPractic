@@ -1,4 +1,4 @@
-include ../inputs/date-input
+include ../inputs/interval-date-input
 include ../inputs/guests-input
 include ../buttons/long-button
 
@@ -7,8 +7,7 @@ mixin searching
         +e.H1.header Найдём номера под ваши пожелания
         form
             +e.dates
-                +date-input('прибытие', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow', 'datepicker1')
-                +date-input('выезд', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
+                +interval-date-input('прибытие', 'выезд')
             +e.guests
                 +guests-input('гости', 'guests-dropdown-button-js')
             +long-button('подобрать номер')

@@ -1,4 +1,5 @@
-mixin interval-date-input
+include ../inputs/date-input
+mixin interval-date-input(firstTitle, secondTitle)
     +b.interval-date-input
-        +date-input('date Dropdown', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow', 'datepicker1')
-        +date-input('date Dropdown', 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow')
+        +date-input(firstTitle , 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow', "datepicker-interval")
+        +date-input(secondTitle , 'ДД.ММ.ГГГГ', 'date-input_small', '_arrow', 'secondRangeInput')

@@ -1,13 +1,18 @@
 @import "src/styles/variables";
-.flatpickr-calendar{
+.flatpickr-calendar {
   width: 320px;
-  background: $white!important;
-  border: 1px solid $dark-shade-25!important;
-  box-shadow: 0 10px 20px $dark-shade-5!important;
-  border-radius: 4px!important;
-  &:before, &:after{
-    display: none!important;
+  background: $white !important;
+  border: 1px solid $dark-shade-25 !important;
+  box-shadow: 0 10px 20px $dark-shade-5 !important;
+  border-radius: 4px !important;
+  &:before, &:after {
+    display: none !important;
   }
+}
+.flatpickr-calendar.open {
+  display: inline-block;
+  z-index: 99999;
+  left: 140PX!important;
 }
 .flatpickr-months{
   padding: 20px 20px 26px;
@@ -87,9 +92,6 @@ span.flatpickr-weekday{
 .flatpickr-day {
   max-width: 40px!important;
 }
-
-
-
 .startRange, .endRange{
   position: relative;
   background: linear-gradient(180deg, $purple 0%, $blue 100%)!important;
@@ -145,7 +147,6 @@ span.flatpickr-weekday{
   background: linear-gradient(180deg, $green 0%, $another-blue 100%);
   border-radius: 50%;
   border: none;
-
   opacity: 1;
 }
 .flatpickr-day{

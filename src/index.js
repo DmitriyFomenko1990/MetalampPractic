@@ -3,10 +3,43 @@ import $ from "jquery";
 import "./js/jquery/jquery-ui"
 import 'owl.carousel';
 import flatpickr from "flatpickr";
+import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 import { Russian } from "flatpickr/dist/l10n/ru.js"
 import ShortcutButtonsPlugin from "shortcut-buttons-flatpickr/dist/shortcut-buttons-flatpickr"
 
 
+flatpickr("#datepicker-interval", {
+    "locale": Russian,
+    mode: "range",
+    dateFormat: "d M",
+    closeOnSelect: false,
+    monthSelectorType: "static",
+    yearSelectorType: "static",
+    nextArrow : "",
+    prevArrow : "",
+    plugins: [
+        new rangePlugin({
+            input: "#secondRangeInput"
+        }),
+        ShortcutButtonsPlugin({
+            button: [{
+                    label: 'очистить',
+                },
+                {
+                    label: 'применить',
+                },],
+            onClick: (index, fp) => {
+                fp.clear();
+                fp.close();
+            }
+        }),
+    ],
+    disable: [
+        function(date) {
+            return !(date.getDate() );
+        }
+    ],
+});
 flatpickr("#datepicker1", {
     "locale": Russian,
     mode: "range",
@@ -19,10 +52,10 @@ flatpickr("#datepicker1", {
     plugins: [
         ShortcutButtonsPlugin({
         button: [{
-            label: 'очистить',
+            labelClear: 'очистить',
         },
         {
-            label: 'применить',
+            labelAccept: 'применить',
         },],
         onClick: (index, fp) => {
             fp.clear();
