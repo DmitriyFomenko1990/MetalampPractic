@@ -1,7 +1,7 @@
 include ../inputs/checkbox-input
-mixin expandable-checkbox-list
+mixin expandable-checkbox-list(title)
     +b.expandable-checkbox-list
-        +e.H3.heaher expandable checkbox list
+        +e.H3.heaher= title
         +e.BUTTON.list-opener(class= "expandable-checkbox-button-js")
         +e.list-wrapper(class= "expandable-checkbox-list-js")
             +checkbox-input('additional-comforts', 'breakfast', 'Завтрак', false)

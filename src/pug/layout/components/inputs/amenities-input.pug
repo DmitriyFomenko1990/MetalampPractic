@@ -1,0 +1,17 @@
+mixin amenities-input(title)
+    +b.amenities-input(class= "amenities-block-js")
+        +e.H3.header= title
+        +b.iqdropdown(class = "amenities-input-js")
+            p.iqdropdown-selection
+            .iqdropdown-menu
+                .iqdropdown-menu-option(data-id = "bedroom")
+                    .block
+                        p.iqdropdown-item спальни
+                .iqdropdown-menu-option(data-id = "bed")
+                    .block
+                        p.iqdropdown-item кровати
+                .iqdropdown-menu-option(data-id = "bathroom")
+                    .block
+                        p.iqdropdown-item ванные комнаты
+
+

@@ -1,32 +1,19 @@
 mixin guests-input(title)
     +b.guests-input(class= "guests-block-js")
         +e.H3.header= title
-        +e.INPUT(
-            type='text'
-            value='Сколько гостей'
-            name='guests'
-            readonly
-        ).input(class= "input-guests-js")
-        +e.BUTTON.dropdown-button(class ="guests-dropdown-button-js")
-        +e.dropdown-wrapper(class ="guests-dropdown-js")
-            +e.selection-wrapper
-                +e.type-wrapper
-                    +e.H3.type взрослые
-                    +e.H3.type дети
-                    +e.H3.type младенцы
-                +e.controllers
-                    +e.controller-wrapper
-                        +e.BUTTON.button._less(class= "less-js")
-                        +e.H3.amount(class= "guest-counter-js") 0
-                        +e.BUTTON.button._more._active(class= "more-js")
-                    +e.controller-wrapper
-                        +e.BUTTON.button._less(class= "less-js")
-                        +e.H3.amount(class= "guest-counter-js") 0
-                        +e.BUTTON.button._more._active(class= "more-js")
-                    +e.controller-wrapper
-                        +e.BUTTON.button._less(class= "less-js")
-                        +e.H3.amount(class= "guest-counter-js") 0
-                        +e.BUTTON.button._more._active(class= "more-js")
-            +e.command-wrapper
-                +e.H3.clean(class = "quest-clean-js") очистить
-                +e.H3.accept применить
+        +b.iqdropdown(class = "guests-input-js")
+            p.iqdropdown-selection
+            .iqdropdown-menu
+                .iqdropdown-menu-option(data-id = "adult")
+                    .block
+                        p.iqdropdown-item взрослые
+                .iqdropdown-menu-option(data-id = "children")
+                    .block
+                        p.iqdropdown-item дети
+                .iqdropdown-menu-option(data-id = "baby")
+                    .block
+                        p.iqdropdown-item младенцы
+                +b.command-wrapper
+                    +e.BUTTON.clean(class = "quest-clean-js") очистить
+                    +e.BUTTON.accept(class = "quest-accept-js") применить
+

@@ -12,6 +12,7 @@ include ../layout/components/inputs/date-input
 include ../layout/components/inputs/rooms-input
 include ../layout/components/inputs/subscription-input
 include ../layout/components/inputs/interval-date-input
+include ../layout/components/inputs/amenities-input
 include ../layout/components/buttons/checkbox-buttons
 include ../layout/components/buttons/radio-buttons
 include ../layout/components/buttons/background-button
@@ -84,11 +85,13 @@ block content
                 +e.H3.pagination-title pagination
                 +pagination
         +b.dropdown-right
-            +expandable-checkbox-list
+            +amenities-input('dropdown')
+            +expandable-checkbox-list('expandable checkbox list')
             +e.additional-info
                 +additional-information('comfort.svg', 'Комфорт', 'Шумопоглощающие стены')
                 +additional-information('convenience.svg', 'Удобство', 'Окно в каждой из спален')
                 +additional-information('cosiness.svg', 'Уют', 'Номер оснащён камином')
+
         +b.dropdown-center
             h3 rich Checkbox Buttons
             +rich-checkbox-buttons

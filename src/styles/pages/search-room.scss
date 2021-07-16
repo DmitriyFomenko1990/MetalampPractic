@@ -16,6 +16,12 @@
       }
     }
   }
+  &__explanation{
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+  }
   &__rooms-block{
     max-width: 834px;
     padding-bottom: 70px;

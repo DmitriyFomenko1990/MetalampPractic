@@ -76,6 +76,10 @@
 }
 .dropdown-right{
   grid-area: l;
+  max-width: 266px;
+  & > div{
+    margin-bottom: 20px;
+  }
   &__additional-info{
     margin-top: 290px;
     & > div{
