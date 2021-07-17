@@ -1,6 +1,7 @@
 extends ./extend
 include ../layout/header-and-footer/header-guest
 include ../layout/header-and-footer/footer-decktop
+include ../layout/header-and-footer/footer-mobile
 include ../layout/components/cards/searching
 
 block content
@@ -8,4 +9,7 @@ block content
     +b.content-landing
         +e.content-wrapper
             +searching
-    +footer-desktop
+    +b.adaptive-footer-desk
+        +footer-desktop
+    +b.adaptive-footer-mobile
+        +footer-mobile

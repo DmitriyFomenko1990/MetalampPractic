@@ -214,6 +214,19 @@ $(document).ready(function(){
         checkboxList.fadeToggle(500)
         checkboxBtn.toggleClass("expandable-checkbox-list__list-opener_active")
     })
+    /* burger-menu */
+    const menu = $('.menu-js');
+    const burger = $('.burger-js');
+    burger.click(function (){
+        $(this).children().toggleClass('burger-menu__burger_active');
+        menu.toggleClass('header__navigation_active');
+    });
+    $(document).mouseup(function (e){
+        if (!menu.is(e.target) && !burger.children().is(e.target)
+            && menu.has(e.target).length === 0) {
+            menu.removeClass('header__navigation_active');
+        }
+    });
     /* guest input dropdown */
     // const guestBlock = $(".guests-block-js");
     // const guestDropdownButton = $(".guests-dropdown-button-js");
