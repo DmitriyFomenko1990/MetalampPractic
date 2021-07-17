@@ -5,10 +5,10 @@ include ../buttons/toggle-button
 include ../buttons/long-button
 include ../buttons/border-button
 
-mixin registration
+mixin registration(longBtnText)
     +b.registration-card
         h1 Регистрация аккаунта
-        form
+        form(action = '')
             +e.name-data
                 +text-input('text', 'name', 'Имя',)
                 +text-input('text', 'surname', 'Фамилия',)
@@ -21,10 +21,11 @@ mixin registration
                 +text-input('password', 'password', 'Пароль',)
             +toggle-button('Получать спецпредложения')
             +e.accept-buttom
-                 +long-button('перейти к оплате')
+                 +long-button(longBtnText)
         +e.login
             p Уже есть аккаунт на Toxin
-            +border-button('войти' ,'border-button_large')
+            a(href='./sing-in.html')
+                +border-button('войти' ,'border-button_large')
 
 
 

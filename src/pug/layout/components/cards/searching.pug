@@ -5,9 +5,9 @@ include ../buttons/long-button
 mixin searching
     +b.searching-card
         +e.H1.header Найдём номера под ваши пожелания
-        form
-            +e.dates
-                +interval-date-input('прибытие', 'выезд')
-            +e.guests
-                +guests-input('гости', 'guests-dropdown-button-js')
+        +e.dates
+            +interval-date-input('прибытие', 'выезд')
+        +e.guests
+            +guests-input('гости')
+        a(href='./search-room.html')
             +long-button('подобрать номер')

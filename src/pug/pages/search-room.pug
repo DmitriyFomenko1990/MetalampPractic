@@ -4,6 +4,7 @@ include ../layout/header-and-footer/footer-decktop
 include ../layout/components/pagination
 include ../layout/components/inputs/date-input
 include ../layout/components/inputs/guests-input
+include ../layout/components/inputs/amenities-input
 include ../layout/components/range-slider
 include ../layout/components/buttons/checkbox-buttons
 include ../layout/components/checkboxes/rich-checkbox-buttons
@@ -15,12 +16,13 @@ block content
     +b.content-search-room
         +e.filters
             +date-input('даты пребывания в отеле', '19 авг - 23 авг', 'date-input_middle', '_arrow', 'datepicker1')
-            +guests-input('гости')
+            +guests-input('гости', '1', '1', '1')
             +e.coast
                 +range-slider('диапазон цены')
                 +e.P.explanation Стоимость за сутки пребывания в номере
             +checkbox-buttons
             +rich-checkbox-buttons
+            +amenities-input('удобства номера', '2', '2', 0)
             +expandable-checkbox-list('дополнительные удобства')
         +e.rooms-block
             +e.rooms

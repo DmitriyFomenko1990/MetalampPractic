@@ -10,4 +10,5 @@ mixin login
             +long-button('войти')
         +e.create
             p Нет аккаунта на Toxin?
-            +border-button('создать' ,'border-button_large')
+            a(href='./registration.html')
+                +border-button('создать' ,'border-button_large')

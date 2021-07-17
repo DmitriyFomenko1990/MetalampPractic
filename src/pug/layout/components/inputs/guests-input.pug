@@ -1,16 +1,16 @@
-mixin guests-input(title)
+mixin guests-input(title, adult, children, baby)
     +b.guests-input(class= "guests-block-js")
         +e.H3.header= title
         +b.iqdropdown(class = "guests-input-js")
             p.iqdropdown-selection
             .iqdropdown-menu
-                .iqdropdown-menu-option(data-id = "adult")
+                .iqdropdown-menu-option(class = 'quest-count' data-id = "adult" data-defaultcount= adult)
                     .block
                         p.iqdropdown-item взрослые
-                .iqdropdown-menu-option(data-id = "children")
+                .iqdropdown-menu-option(class = 'quest-count' data-id = "children" data-defaultcount= children)
                     .block
                         p.iqdropdown-item дети
-                .iqdropdown-menu-option(data-id = "baby")
+                .iqdropdown-menu-option(class = 'quest-count' data-id = "baby" data-defaultcount= baby)
                     .block
                         p.iqdropdown-item младенцы
                 +b.command-wrapper

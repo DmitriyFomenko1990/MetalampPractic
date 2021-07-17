@@ -51,6 +51,9 @@
   &__desc{
     font-size: 12px;
     padding-bottom: 1px;
+    &:active{
+      color: rgba(31, 32, 65, 0.75)!important;
+    }
   }
   &__comment{
     display: flex;

@@ -3,26 +3,27 @@ mixin room-preview(img1, img2, img3, img4, number, type, price, count, rate)
     +b.room-preview
         +e.carousel(class= "owl-carousel")
             +e.IMG(src= img1
-                    alt="room").image
+                alt="room").image
             +e.IMG(src= img2
                 alt="room").image
             +e.IMG(src= img3
                 alt="room").image
             +e.IMG(src= img4
                 alt="room").image
-        +e.wrapper
-            +e.description
-                +e.title
-                    +e.SPAN.char №
-                    +e.H1.number= number
-                    +e.H3.type= type
-                +e
-                    +e.SPAN.price= price
-                    +e.SPAN.desc в сутки
-            +e.comment
-                +rate-button(rate)
-                +e
-                    +e.SPAN.price= count
-                    +e.SPAN.desc в сутки
+        a(href='./rooms-details.html')
+            +e.wrapper
+                +e.description
+                    +e.title
+                        +e.SPAN.char №
+                        +e.H1.number= number
+                        +e.H3.type= type
+                    +e
+                        +e.SPAN.price= price
+                        +e.SPAN.desc в сутки
+                +e.comment
+                    +rate-button(rate)
+                    +e
+                        +e.SPAN.price= count
+                        +e.SPAN.desc Отзывов
 
 

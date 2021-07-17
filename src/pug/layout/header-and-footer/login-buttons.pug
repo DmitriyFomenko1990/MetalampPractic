@@ -3,5 +3,7 @@ include  ../components/buttons/background-button
 
 mixin login-buttons
     +b.login-buttons
-        +border-button('войти', 'border-button_small')
-        +background-button('зарегистрироваться', 'background-button_long')
+        a(href='./sing-in.html')
+            +border-button('войти', 'border-button_small')
+        a(href='./registration.html')
+            +background-button('зарегистрироваться', 'background-button_long')

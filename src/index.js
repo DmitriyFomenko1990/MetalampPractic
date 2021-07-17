@@ -112,7 +112,7 @@ $(document).ready(function(){
             let text ='';
             let babyCounter ='';
             if (totalItems === 0) {
-                clear.removeClass('guests-input__clean_active')
+                clear.show(('command-wrapper__clean_active'))
                 return 'Сколько гостей';
             }
             if (totalItems === 1) text = '1 гость';
@@ -122,7 +122,7 @@ $(document).ready(function(){
             if (itemCount.baby === 1) babyCounter =', 1 младенец';
             if (itemCount.baby > 1) babyCounter =`, ${itemCount.baby} младенца`;
             text += babyCounter;
-            clear.addClass('guests-input__clean_active')
+            clear.addClass('command-wrapper__clean_active')
             return text
         },
     });
@@ -148,6 +148,15 @@ $(document).ready(function(){
             text = bedroom + bed + bathroom;
             return text
         },
+    });
+    $('.quest-clean-js').click(function() {
+        const options = $('.quest-count')
+        console.log(options)
+        options.map((index, el) =>{
+            console.log(el)
+            console.log(el.find('.counter'))
+        })
+
     });
     /* owlCarousel */
     $(".owl-carousel").owlCarousel({
