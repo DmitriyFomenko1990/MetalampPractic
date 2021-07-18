@@ -1,6 +1,7 @@
 extends ./extend
 include ../layout/header-and-footer/header-guest
 include ../layout/header-and-footer/footer-decktop
+include ../layout/header-and-footer/footer-mobile
 include ../layout/components/pagination
 include ../layout/components/inputs/date-input
 include ../layout/components/inputs/guests-input
@@ -75,4 +76,7 @@ block content
                     './img/rooms-previews/07382bbd82b3d15a2914108aa278b6af.png',
                     './img/rooms-previews/19485bbd6d6f8fa504fa254cd3f85471.png', '352', '','5 000₽', '55', 3)
             +pagination
-    +footer-desktop
+    +b.adaptive-footer-desk
+        +footer-desktop
+    +b.adaptive-footer-mobile
+        +footer-mobile

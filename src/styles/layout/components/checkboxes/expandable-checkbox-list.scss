@@ -17,13 +17,12 @@
       transform: rotateX(180deg);
     }
   }
-  &__list-wrapper{
-    display: none;
-    max-width: 100%;
-    position: absolute;
-    top: 39px;
-    & > div {
-      margin-bottom: 10px;
-    }
+
+}
+.list-wrapper{
+  display: none;
+  max-width: 100%;
+  & > div {
+    margin-bottom: 10px;
   }
 }

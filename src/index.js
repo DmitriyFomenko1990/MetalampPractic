@@ -6,7 +6,10 @@ import flatpickr from "flatpickr";
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 import { Russian } from "flatpickr/dist/l10n/ru.js";
 import ShortcutButtonsPlugin from "shortcut-buttons-flatpickr/dist/shortcut-buttons-flatpickr";
-import "./js/jquery/item-quantity-dropdown.min"
+import "./js/jquery/item-quantity-dropdown.min";
+
+var JCanvas = require( 'jcanvas' );
+JCanvas( $, window );
 
 flatpickr("#datepicker-interval", {
     "locale": Russian,
@@ -98,6 +101,17 @@ flatpickr("#datepicker-date", {
     ],
 });
 $(document).ready(function(){
+    /* canvas */
+    $('.canvas').drawArc({
+        fillStyle: 'steelblue',
+        strokeStyle: 'blue',
+        strokeWidth: 4,
+        x: 150, y: 100,
+        fromCenter: false,
+        width: 200,
+        height: 100
+    });
+
     /* guests-input */
     const clear = $('.quest-clean-js');
     clear.click(function (){
@@ -211,7 +225,7 @@ $(document).ready(function(){
     const checkboxBtn = $(".expandable-checkbox-button-js");
     const checkboxList = $(".expandable-checkbox-list-js");
     checkboxBtn.click(function (){
-        checkboxList.fadeToggle(500)
+        checkboxList.toggle(500)
         checkboxBtn.toggleClass("expandable-checkbox-list__list-opener_active")
     })
     /* burger-menu */
@@ -224,9 +238,11 @@ $(document).ready(function(){
     $(document).mouseup(function (e){
         if (!menu.is(e.target) && !burger.children().is(e.target)
             && menu.has(e.target).length === 0) {
+            burger.children().removeClass('burger-menu__burger_active');
             menu.removeClass('header__navigation_active');
         }
     });
+
     /* guest input dropdown */
     // const guestBlock = $(".guests-block-js");
     // const guestDropdownButton = $(".guests-dropdown-button-js");

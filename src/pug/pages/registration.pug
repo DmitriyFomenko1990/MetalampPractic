@@ -1,10 +1,14 @@
 extends ./extend
 include ../layout/header-and-footer/header-guest
 include ../layout/header-and-footer/footer-decktop
+include ../layout/header-and-footer/footer-mobile
 include ../layout/components/cards/registration
 
 block content
     +header-quest
     +b.content-registration
         +registration('зарегистрироваться')
-    +footer-desktop
+    +b.adaptive-footer-desk
+        +footer-desktop
+    +b.adaptive-footer-mobile
+        +footer-mobile

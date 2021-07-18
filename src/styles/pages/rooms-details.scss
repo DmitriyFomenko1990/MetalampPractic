@@ -49,6 +49,22 @@
       margin-bottom: 20px;
     }
   }
+  &__impressions-grafic{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__grafic{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__convas{
+    width: 120px;
+    height: 120px;
+  }
   &__comments{
     margin-bottom: 30px;
     & > div{

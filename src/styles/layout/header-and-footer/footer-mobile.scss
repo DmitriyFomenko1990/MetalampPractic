@@ -4,6 +4,9 @@
   align-items: center;
   margin: 0 auto;
   padding: 120px 0;
+  @media only screen and (max-width: 1100px) {
+    padding: 50px 0;
+  }
   .footer {
     padding: 0;
     box-shadow: none;
@@ -12,9 +15,11 @@
       box-shadow: none;
       height: initial;
     }
-
     &__copyright {
       padding: 22px 0 22px;
+      @media only screen and (max-width: 1100px) {
+        text-align: center;
+      }
     }
     &__social{
       display: flex;
