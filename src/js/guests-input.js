@@ -2,11 +2,14 @@ import $ from "jquery";
 
 const clear = $('.quest-clean-js');
 clear.click(function (){
-
+  // TODO: not implemented
 });
+
 const accept = $('.quest-accept-js');
+
+
 const guestsDropdown = $('.guests-input-js');
-guestsDropdown.iqDropdown({
+const dropdownInstance = guestsDropdown.iqDropdown({
     maxItems: Infinity,
     minItems: 0,
     setSelectionText: (itemCount, totalItems) => {
@@ -27,3 +30,7 @@ guestsDropdown.iqDropdown({
         return text
     },
 });
+
+
+
+console.log(dropdownInstance);

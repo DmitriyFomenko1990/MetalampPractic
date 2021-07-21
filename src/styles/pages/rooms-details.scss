@@ -1,37 +1,60 @@
+@import "../variables";
 .content-room{
   max-width: 1440px;
   margin: 0 auto;
+
   &__images{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 243px 243px;
     grid-template-areas:
-          "bp fs"
-          "bp ss";
+          "big first-small"
+          "big second-small";
+
     @media only screen and (max-width: 1100px) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 486px 243px;
       grid-template-areas:
-          "bp bp"
-          "fs ss";
+          "big big"
+          "first-small second-small";
+    }
+
+    @media only screen and (max-width: 375px) {
+      display: flex;
+      overflow-x: scroll;
+      align-items: stretch;
+      scroll-snap-type: x mandatory;
     }
   }
-  &__large-img{
-    grid-area: bp;
+  &__image-wrap {
     width: 100%;
     height: 100%;
+
+    @media only screen and (max-width: 375px) {
+      width: 100%;
+      height: 200px;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+    }
+
+    &:nth-child(1) {
+      grid-area: big;
+    }
+    &:nth-child(2) {
+      grid-area: first-small;
+    }
+    &:nth-child(3) {
+      grid-area: second-small;
+    }
   }
-  &__first-small-img{
-    grid-area: fs;
+
+  &__image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
-  &__second-small-img{
-    grid-area: ss;
-    width: 100%;
-    height: 100%;
-  }
+
   &__about-wrapper{
     max-width: 1160px;
     margin: 0 auto;
@@ -50,8 +73,10 @@
     }
   }
   &__impressions-grafic{
+    position: relative;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
   &__grafic{
     width: 120px;
@@ -65,6 +90,44 @@
     width: 120px;
     height: 120px;
   }
+  &__count{
+    @include common-title-h1;
+    position: absolute;
+    top: 31px;
+    color: $purple;
+  }
+  &__voices{
+    position: absolute;
+    top: 65px;
+    text-transform: uppercase;
+    color: $purple;
+    padding-top: 0;
+  }
+  &__grafic-list{
+    padding-left: 30px;
+    padding-top: 29px;
+  }
+  &__grafic-item:before{
+    content: '';
+    display: inline-flex;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  &__grafic-item_great:before{
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+  &__grafic-item_good:before{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+  &__grafic-item_satisfyingly:before{
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  &__grafic-item_disappoint:before{
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  }
+
   &__comments{
     margin-bottom: 30px;
     & > div{

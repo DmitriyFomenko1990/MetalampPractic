@@ -11,9 +11,12 @@ block content
     +header-quest
     +b.content-room
         +e.images
-            +e.IMG(src='./img/rooms-previews/2510dccc3aab21597da711673f509391.png').large-img
-            +e.IMG(src='./img/rooms-previews/details-1.png').first-small-img
-            +e.IMG(src='./img/rooms-previews/details-2.png').second-small-img
+            +e.image-wrap
+                +e.IMG(src='./img/rooms-previews/2510dccc3aab21597da711673f509391.png').image
+            +e.image-wrap
+                +e.IMG(src='./img/rooms-previews/details-1.png').image
+            +e.image-wrap
+                +e.IMG(src='./img/rooms-previews/details-2.png').image
         +e.about-wrapper
             +e.about
                 +e.information
@@ -26,15 +29,15 @@ block content
                         h2 Впечатления от номера
                         +e.impressions-grafic
                             +e.grafic
-                                +e.CONVAS.convas(width = '120' height = '120')
+                                +e.CANVAS.canvas(width = '120' height = '120')
                                 +e.H3.count 260
-                                +e.P.voices голосов
+                                +e.H3.voices голосов
                             +e.grafic-description
                                 +e.UL.grafic-list
-                                    +e.LI.grafic-item Великолепно
-                                    +e.LI.grafic-item Хорошо
-                                    +e.LI.grafic-item Удовлетворительно
-                                    +e.LI.grafic-item Разочарован
+                                    +e.LI.grafic-item._great Великолепно
+                                    +e.LI.grafic-item._good Хорошо
+                                    +e.LI.grafic-item._satisfyingly Удовлетворительно
+                                    +e.LI.grafic-item._disappoint Разочарован
                 +e.comments
                     +e.comment-title
                         h2 Отзывы посетителей номера
