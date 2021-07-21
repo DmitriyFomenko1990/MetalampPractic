@@ -3,10 +3,11 @@ import {Russian} from "flatpickr/dist/l10n/ru";
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 import ShortcutButtonsPlugin from "shortcut-buttons-flatpickr";
 
-flatpickr("#datepicker-interval", {
+flatpickr("#double-datepicker", {
     "locale": Russian,
     mode: "range",
-    dateFormat: "d M",
+    minDate: "today",
+    dateFormat: "d.m.yy",
     closeOnSelect: false,
     monthSelectorType: "static",
     yearSelectorType: "static",
@@ -20,12 +21,16 @@ flatpickr("#datepicker-interval", {
             button: [{
                 label: 'очистить',
             },
-                {
-                    label: 'применить',
-                },],
+            {
+                label: 'применить',
+            },],
             onClick: (index, fp) => {
-                fp.clear();
-                fp.close();
+                if (index === 0) {
+                    fp.clear();
+                    fp.close();
+                } else {
+                    fp.close();
+                }
             }
         }),
     ],
@@ -35,35 +40,45 @@ flatpickr("#datepicker-interval", {
         }
     ],
 });
-flatpickr("#datepicker1", {
-    "locale": Russian,
-    mode: "range",
-    dateFormat: "d M",
-    closeOnSelect: false,
-    monthSelectorType: "static",
-    yearSelectorType: "static",
-    nextArrow : "",
-    prevArrow : "",
-    plugins: [
-        ShortcutButtonsPlugin({
-            button: [{
-                labelClear: 'очистить',
-            },
-                {
-                    labelAccept: 'применить',
-                },],
-            onClick: (index, fp) => {
-                fp.clear();
-                fp.close();
-            }
-        }),
-    ],
-    disable: [
-        function(date) {
-            return !(date.getDate() );
-        }
-    ],
-});
+let flatpickrInterval = flatpickr("#datepicker-interval", {
+                    "locale": Russian,
+                    mode: "range",
+                    minDate: "today",
+                    dateFormat: "d M",
+                    closeOnSelect: false,
+                    monthSelectorType: "static",
+                    yearSelectorType: "static",
+                    nextArrow : "",
+                    prevArrow : "",
+                    plugins: [
+                        ShortcutButtonsPlugin({
+                            button: [{
+                                label: 'очистить',
+                            },
+                                {
+                                    label: 'применить',
+                                },],
+                            onClick: (index, fp) => {
+                                if (index === 0) {
+                                    fp.clear();
+                                    fp.close();
+                                } else {
+                                    fp.close();
+                                }
+                            }
+                        }),
+                    ],
+                    disable: [
+                        function(date) {
+                            return !(date.getDate() );
+                        }
+                    ],
+                });
+if (flatpickrInterval.l10n) {
+    flatpickrInterval.l10n.months.shorthand = ['янв', 'фев', 'март', 'апр', 'май', 'июнь',
+        'июль', 'авг', 'сент', 'окт', 'нояб', 'дек'];
+};
+
 flatpickr("#datepicker-date", {
     "locale": Russian,
     dateFormat: "d.m.yy ",
@@ -77,12 +92,16 @@ flatpickr("#datepicker-date", {
             button: [{
                 label: 'очистить',
             },
-                {
-                    label: 'применить',
-                },],
+            {
+                label: 'применить',
+            },],
             onClick: (index, fp) => {
-                fp.clear();
-                fp.close();
+                if (index === 0) {
+                    fp.clear();
+                    fp.close();
+                } else {
+                    fp.close();
+                }
             }
         }),
     ],

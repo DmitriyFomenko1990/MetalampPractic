@@ -168,5 +168,8 @@ span.flatpickr-weekday{
 .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
 .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)){
   box-shadow: none;
-
+}
+.flatpickr-day.selected.endRange, .flatpickr-day.startRange.endRange,
+.flatpickr-day.endRange.endRange {
+  opacity: 1;
 }

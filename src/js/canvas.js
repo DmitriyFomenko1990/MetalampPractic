@@ -2,9 +2,8 @@ const radians = function(deg) {
     return (Math.PI/180)*deg
 }
 const canvas = document.querySelector('.content-room__canvas');
-console.log(canvas)
-if (canvas.getContext) {
-    const grafic = canvas.getContext('2d');
+if (canvas) {
+    const grafic = canvas?.getContext('2d');
 
     grafic.beginPath();
     const gradientRthDwn = grafic.createLinearGradient(120,60, 60,120);
@@ -35,5 +34,4 @@ if (canvas.getContext) {
     grafic.strokeStyle = gradientRthTop
     grafic.arc(60, 60, 56, radians(271), radians(359) ); // Outer circle
     grafic.stroke();
-
 }

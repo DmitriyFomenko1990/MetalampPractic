@@ -9,7 +9,7 @@ const accept = $('.quest-accept-js');
 
 
 const guestsDropdown = $('.guests-input-js');
-const dropdownInstance = guestsDropdown.iqDropdown({
+guestsDropdown.iqDropdown({
     maxItems: Infinity,
     minItems: 0,
     setSelectionText: (itemCount, totalItems) => {
@@ -31,6 +31,3 @@ const dropdownInstance = guestsDropdown.iqDropdown({
     },
 });
 
-
-
-console.log(dropdownInstance);
